@@ -2,10 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\AdminController;
-use App\Http\Controllers\customerController;
-use App\Http\Controllers\branceController;
-
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\BranchController;
+use App\Http\Controllers\WebController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,9 +16,17 @@ use App\Http\Controllers\branceController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/login', [UserController::class, 'login'])->name('login');
+Route::post('/do-login',[UserController::class,'doLogin'])->name('do.login');
+Route::group(['middleware'=>'auth'],function (){
 
-Route::get('/', [DashboardController::class, 'Dashboard']);
-Route::get('/admin-profile',[AdminController::class, 'profile'])->name('admin');
-Route::post('/admin-store',[AdminController::class, 'store'])->name('admin.store');
-Route::get('/customer',[customerController::class,'profile'])->name('customer');
-Route::get('/brance',[branceController::class,'address'])->name('brance');
+
+Route::get('/', [DashboardController::class, 'Dashboard'])->name('dashboard');
+Route::get('/branch', [BranchController::class, 'index'])->name('branch.index');
+Route::get('/branch/create', [BranchController::class, 'create'])->name('branch.create');
+Route::post('/branch/store', [BranchController::class, 'store'])->name('branch.store');
+
+//Route::get('/user.userfrom', [UserController::class, 'from']);name('user.from');
+//Route::get('/',[WebController::class,'web'])->name('webpage');
+Route::get('/branch/delete/{branch_id}',[BranchController::class,'deletebranch'])->name('admin.branch.delete');
+});

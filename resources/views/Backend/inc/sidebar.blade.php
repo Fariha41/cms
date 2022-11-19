@@ -9,54 +9,40 @@
                                 Dashboard
                             </a>
 
-                            <a class="nav-link" href="{{route('admin') }}">
+                            <a class="nav-link" href="{{route('branch.index') }}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                Admin
+                                brance
                             </a>
                             
-                            <a class="nav-link" href="{{route('customer')}}">
+                            <a class="nav-link" href="{{('location')}}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
-                                Customer
+                                location
                             </a>
 
-                            <a class="nav-link" href="{{route('brance')}}" >
+                            <a class="nav-link" href="{{('parcel type')}}" >
                                 <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
-                                Brance
+                                parcel type
                             </a>
 
-                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
-                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
-                                Location
-                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                            </a>
 
-                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                            <a class="nav-link" href="{{('price set up')}}" >
                                 <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
-                                Parcel type
-                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                             </a>
-
-                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
-                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
-                                Booking
-                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                            </a>
-
-                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
-                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
-                                Delivery
-                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                price set up
                             </a>
 
                             
-                            
-                            <a class="nav-link" href="charts.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
-                                Report
+
+                            <a class="nav-link" href="{{('user')}}" >
+                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                                user
                             </a>
-                            <a class="nav-link" href="tables.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                                payment
+                            <a class="nav-link" href="{{('cargo')}}" >
+                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                                cargo
+                            </a>
+                            <a class="nav-link" href="{{('report')}}" >
+                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                                report
                             </a>
                         </div>
                     </div>
