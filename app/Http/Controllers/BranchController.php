@@ -12,13 +12,13 @@ class BranchController extends Controller
     {
         $cats=Branch::all();//select * from categories;
 //        dd($cats);
-        return view('backend.branch.index',compact('cats'));
+        return view('backend.pages.branch.index',compact('cats'));
     }
 
     
     public function create()
     {
-        return view('Backend.branch.create');
+        return view('Backend.pages.branch.create');
     }
 
     
@@ -38,5 +38,30 @@ class BranchController extends Controller
         branch::find($branch_id)->delete();
         return redirect()->back()->with('message','branch deleted successfully.');
     }
+    public function viewbranch($branch_id)
+    {
+      $branch=branch::find($branch_id);
+      return view('Backend.pages.branch.view',compact('branch'));
+    }
+    public function edit($branch_id)
+    {
+        $branch=branch::find($branch_id);
+        // dd($branch);
+        return view('Backend.pages.branch.edit',compact('branch'));
+    }
+    public function update(Request $request,$branch_id){
+        $branch=branch::find($branch_id);
+        $branch->update ([
+            //database column name => input field name
+                'Brance_name'=>$request->Brance_name ,
+                'Branch_phone'=>$request->Branch_phone,
+                'Branch_address'=>$request->Brance_address,
+                'Branch_status'=>$request->Branch_status,
+         ]);
+         return redirect()->route('branch.index')->with('message','Update success.');
+
+
+    }
+
 
 }

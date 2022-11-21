@@ -14,11 +14,11 @@ class UserController extends Controller
     {
 
         $credentials=$request->except('_token');
-//        $credentials=$request->only(['email','password']);
+        //$credentials=$request->only(['email','password']);
 
         if(Auth::attempt($credentials))
         {
-            return redirect()->route('dashbord');
+            return redirect()->route('dashboard');
         }
         return redirect()->back()->with('message','invalid credentials');
 

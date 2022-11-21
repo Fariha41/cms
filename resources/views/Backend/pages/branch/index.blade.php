@@ -32,9 +32,9 @@
                 <td>{{$data->Branch_address}}</td>
                 <td>{{$data->Branch_status}}</td>
                 <td>
-                <a href="" class="btn btn-primary">Update</a>
+                <a href="{{route('branch.edit',$data->id)}}" class="btn btn-primary">Update</a>
                 <a href="{{route('admin.branch.delete',$data->id)}}" class="btn btn-danger">Delete</a>
-                <a href="" class="btn btn-success">View</a>
+                <a href="{{route('admin.branch.view',$data->id)}}" class="btn btn-success">View</a>
             </td>
                    
                 </tr>
