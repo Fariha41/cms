@@ -1,73 +1,5 @@
-<!DOCTYPE html>
-<html lang="en-US" dir="ltr">
-
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
-    <!-- ===============================================-->
-    <!--    Document Title-->
-    <!-- ===============================================-->
-    <title>courier | Landing, Responsive &amp; Business Templatee</title>
-
-
-    <!-- ===============================================-->
-    <!--    Favicons-->
-    <!-- ===============================================-->
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicons/favicon.ico">
-    <link rel="manifest" href="assets/img/favicons/manifest.json">
-    <meta name="msapplication-TileImage" content="assets/img/favicons/mstile-150x150.png">
-    <meta name="theme-color" content="#ffffff">
-
-
-    <!-- ===============================================-->
-    <!--    Stylesheets-->
-    <!-- ===============================================-->
-    <link href="{{url('/Fronted/css/theme.css')}}" rel="stylesheet" />
-
-  </head>
-
-
-  <body>
-
-    <!-- ===============================================-->
-    <!--    Main Content-->
-    <!-- ===============================================-->
-    <main class="main" id="top">
-      
-
-
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3 d-block" data-navbar-on-scroll="data-navbar-on-scroll">
-        <div class="container"><a class="navbar-brand" href="index.html"><img src="assets/img/gallery/logo.png" height="45" alt="logo" /></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"> </span></button>
-          <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto pt-2 pt-lg-0 font-base">
-              <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="index.html">Home</a></li>
-              <li class="nav-item px-2"><a class="nav-link" href="#services">Our Services</a></li>
-              <li class="nav-item px-2"><a class="nav-link" href="#findUs">Find Us</a></li>
-            </ul>
-            <div class="dropdown d-none d-lg-block">
-              <button class="btn bg-soft-warning ms-2" id="dropdownMenuButton1" type="submit" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-search text-warning"></i></button>
-              <div class="dropdown-menu dropdown-menu-lg-end p-0 rounded" aria-labelledby="dropdownMenuButton1" style="top:55px">
-                <form>
-                  <input class="form-control border-200" type="search" placeholder="Search" aria-label="Search" style="background:#FDF1DF;" />
-                </form>
-              </div>
-            </div><a class="btn btn-primary order-1 order-lg-0 ms-lg-3" href="#!">Contact Us</a>
-            <form class="d-flex my-3 d-block d-lg-none">
-              <input class="form-control me-2 border-200 bg-light" type="search" placeholder="Search" aria-label="Search" />
-              <button class="btn btn-outline-primary" type="submit">Search</button>
-            </form>
-          </div>
-        </div>
-      </nav>
-
-
+@extends('Frontend.master')
+@section('content')
 
 
       <section class="py-xxl-10 pb-0" id="home">
@@ -77,7 +9,7 @@
 
         <div class="container">
           <div class="row align-items-center">
-            <div class="col-md-5 col-xl-6 col-xxl-7 order-0 order-md-1 text-end"><img class="pt-7 pt-md-0 w-100" src="assets/img/illustrations/hero.png" alt="hero-header" /></div>
+
             <div class="col-md-75 col-xl-6 col-xxl-5 text-md-start text-center py-8">
               <h1 class="fw-normal fs-6 fs-xxl-7">A trusted provider of </h1>
               <h1 class="fw-bolder fs-6 fs-xxl-7 mb-2">courier services.</h1>
@@ -103,7 +35,7 @@
             <div class="col-md-4 pt-4 px-md-2 px-lg-3">
               <div class="card h-100 px-lg-5 card-span">
                 <div class="card-body d-flex flex-column justify-content-around">
-                  <div class="text-center pt-5"><img class="img-fluid" src="assets/img/icons/services-1.svg" alt="..." />
+                  <div class="text-center pt-5"><img class="img-fluid" src="{{url('/Fronted/img/icons/services-1.svg')}}" alt="..." />
                     <h5 class="my-4">Business Services</h5>
                   </div>
                   <p>Offering home delivery around the city, where your products will be at your doorstep within 48-72 hours.</p>
@@ -126,7 +58,7 @@
             <div class="col-md-4 pt-4 px-md-2 px-lg-3">
               <div class="card h-100 px-lg-5 card-span">
                 <div class="card-body d-flex flex-column justify-content-around">
-                  <div class="text-center pt-5"><img class="img-fluid" src="assets/img/icons/services-2.svg" alt="..." />
+                  <div class="text-center pt-5"><img class="img-fluid" src="{{url('/Fronted/img/icons/services-2.svg')}}" alt="..." />
                     <h5 class="my-4">Statewide Services</h5>
                   </div>
                   <p>Offering home delivery around the city, where your products will be at your doorstep within 48-72 hours.</p>
@@ -149,7 +81,7 @@
             <div class="col-md-4 pt-4 px-md-2 px-lg-3">
               <div class="card h-100 px-lg-5 card-span">
                 <div class="card-body d-flex flex-column justify-content-around">
-                  <div class="text-center pt-5"><img class="img-fluid" src="assets/img/icons/services-3.svg" alt="..." />
+                  <div class="text-center pt-5"><img class="img-fluid" src="{{url('/Fronted/img/icons/services-3.svg')}}" alt="..." />
                     <h5 class="my-4">Personal Services</h5>
                   </div>
                   <p>You can trust us to safely deliver your most sensitive documents to the specific area in a short time.</p>
@@ -187,31 +119,31 @@
         <div class="container">
           <div class="row">
             <div class="col-6 col-lg mb-5">
-              <div class="text-center"><img src="assets/img/icons/awards.png" alt="..." />
+              <div class="text-center"><img src="{{url('/Fronted/img/icons/awards.png')}}" alt="..." />
                 <h1 class="text-primary mt-4">26+</h1>
                 <h5 class="text-800">Awards won</h5>
               </div>
             </div>
             <div class="col-6 col-lg mb-5">
-              <div class="text-center"><img src="assets/img/icons/states.png" alt="..." />
+              <div class="text-center"><img src="{{url('/Fronted/img/icons/states.png')}}" alt="..." />
                 <h1 class="text-primary mt-4">65+</h1>
                 <h5 class="text-800">States covered</h5>
               </div>
             </div>
             <div class="col-6 col-lg mb-5">
-              <div class="text-center"><img src="assets/img/icons/clients.png" alt="..." />
+              <div class="text-center"><img src="{{url('/Fronted/img/icons/clients.png')}}" alt="..." />
                 <h1 class="text-primary mt-4">689K+</h1>
                 <h5 class="text-800">Happy clients</h5>
               </div>
             </div>
             <div class="col-6 col-lg mb-5">
-              <div class="text-center"><img src="assets/img/icons/goods.png" alt="..." />
+              <div class="text-center"><img src="{{url('/Fronted/img/icons/goods.png')}}" alt="..." />
                 <h1 class="text-primary mt-4">130M+</h1>
                 <h5 class="text-800">Goods delivered</h5>
               </div>
             </div>
             <div class="col-6 col-lg mb-5">
-              <div class="text-center"><img src="assets/img/icons/business.png" alt="..." />
+              <div class="text-center"><img src="{{url('/Fronted/img/icons/business.png')}}" alt="..." />
                 <h1 class="text-primary mt-4">130M+</h1>
                 <h5 class="text-800">Business hours</h5>
               </div>
@@ -234,26 +166,50 @@
         <div class="container">
           <div class="row">
             <div class="col-12">
-              <div class="card bg-dark text-white py-4 py-sm-0"><img class="w-100" src="assets/img/gallery/video.png" alt="video" />
-                <div class="card-img-overlay bg-dark-gradient d-flex flex-column flex-center"><img src="assets/img/icons/play.png" width="80" alt="play" />
-                  <h5 class="text-primary">FASTEST DELIVERY</h5>
-                  <p class="text-center">You can get your valuable item in the fastest period of<br class="d-none d-sm-block" />time with safety. Because your emergency<br class="d-none d-sm-block" />is our first priority.</p><a class="stretched-link" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"></a>
-                  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-lg modal-dialog-centered">
-                      <div class="modal-content overflow-hidden">
-                        <div class="modal-header p-0">
-                          <div class="ratio ratio-16x9" id="exampleModalLabel">
-                            <iframe src="https://www.youtube.com/embed/TlcP2aTOp-Q" title="YouTube video" allowfullscreen="allowfullscreen"></iframe>
-                          </div>
-                        </div>
-                        <div class="modal-footer">
-                          <button class="btn btn-primary" type="button" data-bs-dismiss="modal">Close</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                <!-- bookingList table -->
+                <table class="table">
+    <thead class="thead-dark">
+        <tr>
+        <th scope="row">1</th>
+        <th>sender name</th>
+        <th>sender email</th>
+        <th>sender phone number</th>
+        <th>sender address</th>
+        <th>sender branch</th>
+        <th>sender city</th>
+        <th>Receiver name</th>
+        <th>Receiver email</th>
+        <th>Receiver phone number</th>
+        <th>Receiver address</th>
+        <th>Receiver branch</th>
+        <th>Receiver city</th>
+        <th>Status</th>
+        </tr>
+    </thead>
+     <tbody>
+        @foreach($list as $data)
+        <tr>
+            <th scope="row">{{$data->id}}</th>
+            <td>{{$data->sender_name}}</td>
+            <td>{{$data->sender_email}}</td>
+            <td>{{$data->sender_mobile}}</td>
+            <td>{{$data->sender_address}}</td>
+            <td>{{$data->sender_branch}}</td>
+            <td>{{$data->sender_city}}</td>
+            <td>{{$data->receiver_name}}</td>
+            <td>{{$data->receiver_email}}</td>
+            <td>{{$data->receiver_mobile}}</td>
+            <td>{{$data->receiver_address}}</td>
+            <td>{{$data->receiver_branch}}</td>
+            <td>{{$data->receiver_city}}</td>
+            <td>{{$data->status}}</td>
+
+        </tr>
+        @endforeach
+        
+    </tbody>
+    </table>
+
             </div>
           </div>
         </div>
@@ -292,7 +248,7 @@
                         <p class="card-text pt-3">I purchased a phone from an e-commerce site, and this courier service provider assisted me in getting it delivered to my home. I received my phone within one day, and I was really satisfied with their service when I received it. </p>
                         <div class="d-xl-flex justify-content-between align-items-center">
                           <div class="d-flex align-items-center mb-3"><i class="fas fa-star text-primary me-1"></i><i class="fas fa-star text-primary me-1"></i><i class="fas fa-star text-primary me-1"></i><i class="fas fa-star text-primary me-1"></i><i class="fas fa-star text-primary me-1"></i></div>
-                          <div class="d-flex align-items-center"><img class="img-fluid" src="assets/img/icons/avatar.png" alt="" />
+                          <div class="d-flex align-items-center"><img class="img-fluid" src="{{url('/Fronted/img/icons/avatar.png')}}" alt="" />
                             <div class="flex-1 ms-3">
                               <h6 class="mb-0 fs--1 text-1000 fw-medium">Yves Tanguy</h6>
                               <p class="fs--2 fw-normal mb-0">Chief Executive, DLF</p>
@@ -309,7 +265,7 @@
                         <p class="card-text pt-3">I purchased a phone from an e-commerce site, and this courier service provider assisted me in getting it delivered to my home. I received my phone within one day, and I was really satisfied with their service when I received it.</p>
                         <div class="d-xl-flex justify-content-between align-items-center">
                           <div class="d-flex align-items-center mb-3"><i class="fas fa-star text-primary me-1"></i><i class="fas fa-star text-primary me-1"></i><i class="fas fa-star text-primary me-1"></i><i class="fas fa-star text-primary me-1"></i><i class="fas fa-star text-primary me-1"></i></div>
-                          <div class="d-flex align-items-center"><img class="img-fluid" src="assets/img/icons/avatar.png" alt="" />
+                          <div class="d-flex align-items-center"><img class="img-fluid" src="{{url('/Fronted/img/icons/avatar.png')}}" alt="" />
                             <div class="flex-1 ms-3">
                               <h6 class="mb-0 fs--1 text-1000 fw-medium">Kim Young Jou</h6>
                               <p class="fs--2 fw-normal mb-0">Chief Executive, DLF</p>
@@ -326,7 +282,7 @@
                         <p class="card-text pt-3">I purchased a phone from an e-commerce site, and this courier service provider assisted me in getting it delivered to my home. I received my phone within one day, and I was really satisfied with their service when I received it. .</p>
                         <div class="d-xl-flex justify-content-between align-items-center">
                           <div class="d-flex align-items-center mb-3"><i class="fas fa-star text-primary me-1"></i><i class="fas fa-star text-primary me-1"></i><i class="fas fa-star text-primary me-1"></i><i class="fas fa-star text-primary me-1"></i><i class="fas fa-star text-primary me-1"></i></div>
-                          <div class="d-flex align-items-center"><img class="img-fluid" src="assets/img/icons/avatar.png" alt="" />
+                          <div class="d-flex align-items-center"><img class="img-fluid" src="{{url('/Fronted/img/icons/avatar.png')}}" alt="" />
                             <div class="flex-1 ms-3">
                               <h6 class="mb-0 fs--1 text-1000 fw-medium">Yves Tanguy</h6>
                               <p class="fs--2 fw-normal mb-0">Chief Executive, DLF</p>
@@ -347,7 +303,7 @@
                         <p class="card-text pt-3">I purchased a phone from an e-commerce site, and this courier service provider assisted me in getting it delivered to my home. I received my phone within one day, and I was really satisfied with their service when I received it. </p>
                         <div class="d-xl-flex justify-content-between align-items-center">
                           <div class="d-flex align-items-center mb-3"><i class="fas fa-star text-primary me-1"></i><i class="fas fa-star text-primary me-1"></i><i class="fas fa-star text-primary me-1"></i><i class="fas fa-star text-primary me-1"></i><i class="fas fa-star text-primary me-1"></i></div>
-                          <div class="d-flex align-items-center"><img class="img-fluid" src="assets/img/icons/avatar.png" alt="" />
+                          <div class="d-flex align-items-center"><img class="img-fluid" src="{{url('/Fronted/img/icons/avatar.png')}}" alt="" />
                             <div class="flex-1 ms-3">
                               <h6 class="mb-0 fs--1 text-1000 fw-medium">Yves Tanguy</h6>
                               <p class="fs--2 fw-normal mb-0">Chief Executive, DLF</p>
@@ -364,7 +320,7 @@
                         <p class="card-text pt-3">I purchased a phone from an e-commerce site, and this courier service provider assisted me in getting it delivered to my home. I received my phone within one day, and I was really satisfied with their service when I received it. </p>
                         <div class="d-xl-flex justify-content-between align-items-center">
                           <div class="d-flex align-items-center mb-3"><i class="fas fa-star text-primary me-1"></i><i class="fas fa-star text-primary me-1"></i><i class="fas fa-star text-primary me-1"></i><i class="fas fa-star text-primary me-1"></i><i class="fas fa-star text-primary me-1"></i></div>
-                          <div class="d-flex align-items-center"><img class="img-fluid" src="assets/img/icons/avatar.png" alt="" />
+                          <div class="d-flex align-items-center"><img class="img-fluid" src="{{url('/Fronted/img/icons/avatar.png')}}" alt="" />
                             <div class="flex-1 ms-3">
                               <h6 class="mb-0 fs--1 text-1000 fw-medium">Kim Young Jou</h6>
                               <p class="fs--2 fw-normal mb-0">Chief Executive, DLF</p>
@@ -381,7 +337,7 @@
                         <p class="card-text pt-3">I purchased a phone from an e-commerce site, and this courier service provider assisted me in getting it delivered to my home. I received my phone within one day, and I was really satisfied with their service when I received it. .</p>
                         <div class="d-xl-flex justify-content-between align-items-center">
                           <div class="d-flex align-items-center mb-3"><i class="fas fa-star text-primary me-1"></i><i class="fas fa-star text-primary me-1"></i><i class="fas fa-star text-primary me-1"></i><i class="fas fa-star text-primary me-1"></i><i class="fas fa-star text-primary me-1"></i></div>
-                          <div class="d-flex align-items-center"><img class="img-fluid" src="assets/img/icons/avatar.png" alt="" />
+                          <div class="d-flex align-items-center"><img class="img-fluid" src="{{url('/Fronted/img/icons/avatar.png')}}" alt="" />
                             <div class="flex-1 ms-3">
                               <h6 class="mb-0 fs--1 text-1000 fw-medium">Yves Tanguy</h6>
                               <p class="fs--2 fw-normal mb-0">Chief Executive, DLF</p>
@@ -402,7 +358,7 @@
                         <p class="card-text pt-3">I purchased a phone from an e-commerce site, and this courier service provider assisted me in getting it delivered to my home. I received my phone within one day, and I was really satisfied with their service when I received it. </p>
                         <div class="d-xl-flex justify-content-between align-items-center">
                           <div class="d-flex align-items-center mb-3"><i class="fas fa-star text-primary me-1"></i><i class="fas fa-star text-primary me-1"></i><i class="fas fa-star text-primary me-1"></i><i class="fas fa-star text-primary me-1"></i><i class="fas fa-star text-primary me-1"></i></div>
-                          <div class="d-flex align-items-center"><img class="img-fluid" src="assets/img/icons/avatar.png" alt="" />
+                          <div class="d-flex align-items-center"><img class="img-fluid" src="{{url('/Fronted/img/icons/avatar.png')}}" alt="" />
                             <div class="flex-1 ms-3">
                               <h6 class="mb-0 fs--1 text-1000 fw-medium">Yves Tanguy</h6>
                               <p class="fs--2 fw-normal mb-0">Chief Executive, DLF</p>
@@ -419,7 +375,7 @@
                         <p class="card-text pt-3">“I purchased a phone from an e-commerce site, and this courier service provider assisted me in getting it delivered to my home. I received my phone within one day, and I was really satisfied with their service when I received it. </p>
                         <div class="d-xl-flex justify-content-between align-items-center">
                           <div class="d-flex align-items-center mb-3"><i class="fas fa-star text-primary me-1"></i><i class="fas fa-star text-primary me-1"></i><i class="fas fa-star text-primary me-1"></i><i class="fas fa-star text-primary me-1"></i><i class="fas fa-star text-primary me-1"></i></div>
-                          <div class="d-flex align-items-center"><img class="img-fluid" src="assets/img/icons/avatar.png" alt="" />
+                          <div class="d-flex align-items-center"><img class="img-fluid" src="{{url('/Fronted/img/icons/avatar.png')}}" alt="" />
                             <div class="flex-1 ms-3">
                               <h6 class="mb-0 fs--1 text-1000 fw-medium">Kim Young Jou</h6>
                               <p class="fs--2 fw-normal mb-0">Chief Executive, DLF</p>
@@ -436,7 +392,7 @@
                         <p class="card-text pt-3">I purchased a phone from an e-commerce site, and this courier service provider assisted me in getting it delivered to my home. I received my phone within one day, and I was really satisfied with their service when I received it. .</p>
                         <div class="d-xl-flex justify-content-between align-items-center">
                           <div class="d-flex align-items-center mb-3"><i class="fas fa-star text-primary me-1"></i><i class="fas fa-star text-primary me-1"></i><i class="fas fa-star text-primary me-1"></i><i class="fas fa-star text-primary me-1"></i><i class="fas fa-star text-primary me-1"></i></div>
-                          <div class="d-flex align-items-center"><img class="img-fluid" src="assets/img/icons/avatar.png" alt="" />
+                          <div class="d-flex align-items-center"><img class="img-fluid" src="{{url('/Fronted/img/icons/avatar.png')}}" alt="" />
                             <div class="flex-1 ms-3">
                               <h6 class="mb-0 fs--1 text-1000 fw-medium">Yves Tanguy</h6>
                               <p class="fs--2 fw-normal mb-0">Chief Executive, DLF</p>
@@ -460,223 +416,185 @@
             </div>
           </div>
         </div>
-        <!-- end of .container-->
-
-      </section>
-      <!-- <section> close ============================-->
-      <!-- ============================================-->
 
 
+        <div class="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="z-index: 99999;">
+    <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Registration</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div  class="modal-body">
 
+      <form action="{{route('registration')}}" method="post" enctype="multipart/form-data">
+                                    @csrf
+                                    <div class="form-group">
+                                        <label for="name">Enter Your Name:</label>
+                                        <input name="customer_name" type="text" class="form-control" id="name"  placeholder="Enter name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Email address</label>
+                                        <input name="customer_email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                                    </div>
 
-      <!-- ============================================-->
-      <!-- <section> begin ============================-->
-      <section>
+                                    <div class="form-group">
+                                        <label for="number">Phone Number</label>
+                                        <input name="customer_phone" type="text" class="form-control" id="number"  placeholder="Enter Number">
+                                    </div>
 
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-md-6 col-lg-5 col-xl-4"><img src="assets/img/illustrations/callback.png" alt="..." />
-              <h5 class="text-danger">REQUEST A CALLBACK</h5>
-              <h2>We will contact in the shortest time.</h2>
-              <p class="text-muted">Monday to Friday, 9am-5pm.</p>
-            </div>
-            <div class="col-md-6 col-lg-5 col-xl-4">
-              <form class="row">
-                <div class="mb-3">
-                  <label class="form-label visually-hidden" for="inputName">Name</label>
-                  <input class="form-control form-quriar-control" id="inputName" type="text" placeholder="Name" />
-                </div>
-                <div class="mb-3">
-                  <label class="form-label visually-hidden" for="inputEmail">Another label</label>
-                  <input class="form-control form-quriar-control" id="inputEmail" type="email" placeholder="Email" />
-                </div>
-                <div class="mb-5">
-                  <label class="form-label visually-hidden" for="validationTextarea">Message</label>
-                  <textarea class="form-control form-quriar-control is-invalid border-400" id="validationTextarea" placeholder="Message" style="height: 150px" required="required"></textarea>
-                </div>
-                <div class="d-grid">
-                  <button class="btn btn-primary" type="submit">Send Message<i class="fas fa-paper-plane ms-2"></i></button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-        <!-- end of .container-->
+                                    <div class="form-group">
+                                        <label for="exampleInputPassword1">Password</label>
+                                        <input name="customer_password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                                    </div>
 
-      </section>
-      <!-- <section> close ============================-->
-      <!-- ============================================-->
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
 
+</div>
 
-
-
-      <!-- ============================================-->
-      <!-- <section> begin ============================-->
-      <section id="findUs">
-
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-md-8 col-lg-5 mb-6 text-center">
-              <h5 class="text-danger">FIND US</h5>
-              <h2>Access us easily</h2>
-            </div>
-            <div class="col-12">
-              <div class="card card-span rounded-2 mb-3">
-                <div class="row">
-                  <div class="col-md-6 col-lg-7 d-flex"><img class="w-100 fit-cover rounded-md-start rounded-top rounded-md-top-0" src="assets/img/gallery/map.svg" alt="map" /></div>
-                  <div class="col-md-6 col-lg-5 d-flex flex-center">
-                    <div class="card-body">
-                      <h5>Contact with us</h5>
-                      <p class="text-700 my-4"> <i class="fas fa-map-marker-alt text-warning me-3"></i><span>2277 Lorem Ave, San Diego, CA 22553</span></p>
-                      <p><i class="fas fa-phone-alt text-warning me-3"></i><span class="text-700">Monday - Friday: 10 am - 10pm<br/><span class="ps-4">Sunday: 11 am - 9pm  </span></span></p>
-                      <p><i class="fas fa-envelope text-warning me-3"> </i><a class="text-700" href="mailto:vctung@outlook.com"> info@quriarbox.com</a></p>
-                      <ul class="list-unstyled list-inline mt-5">
-                        <li class="list-inline-item"><a class="text-decoration-none" href="#!"><i class="fab fa-facebook-square fs-2"></i></a></li>
-                        <li class="list-inline-item"><a class="text-decoration-none" href="#!"><i class="fab fa-instagram-square fs-2"></i></a></li>
-                        <li class="list-inline-item"><a class="text-decoration-none" href="#!"><i class="fab fa-twitter-square fs-2"></i></a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="text-center">
-                <button class="btn btn-primary px-5" type="submit"><i class="fas fa-phone-alt me-2"></i><a class="text-light" href="tel:123-456789">Call us to delivery 123-456789</a></button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- end of .container-->
-
-      </section>
-      <!-- <section> close ============================-->
-      <!-- ============================================-->
+  </section>
 
 
 
 
-      <!-- ============================================-->
-      <!-- <section> begin ============================-->
-      <section class="bg-1000">
 
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-6">
-              <h2 class="fw-bold text-white">Get an update every week</h2>
-              <p class="text-300">We ensure that your product is delivered in the safest possible<br />manner, at the correct location, at the right time.</p>
-            </div>
-            <div class="col-lg-6">
-              <h5 class="text-primary mb-3">SUBSCRIBE TO NEWSLETTER </h5>
-              <form class="row gx-2 gy-2 align-items-center">
-                <div class="col">
-                  <div class="input-group-icon">
-                    <label class="visually-hidden" for="inputEmailCta">Address</label>
-                    <input class="form-control input-box form-quriar-control text-light" id="inputEmailCta" type="email" placeholder="Enter your mail" />
-                  </div>
-                </div>
-                <div class="d-grid gap-3 col-sm-auto">
-                  <button class="btn btn-danger" type="submit">Subscribe</button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-        <!-- end of .container-->
+<!-- Modal -->
+<div class="modal fade" id="log"  role="dialog" aria-labelledby="exampleModalLabel"                     aria-hidden="true" style="z-index: 99999;">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      <form action="{{route('user.login')}}" method="post">
+                                @csrf
+                                <div class="modal-body">
 
-      </section>
-      <!-- <section> close ============================-->
-      <!-- ============================================-->
+                                    <div>
+                                        <label for="">Enter your email</label>
+                                        <input name="email" type="email" class="form-control" required placeholder="Enter email">
+                                    </div>
 
+                                    <div>
+                                        <label for="">Enter your password</label>
+                                        <input name="password" type="password" class="form-control" required placeholder="Enter password">
+                                    </div>
 
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </div>
+                            </form>
 
-
-      <!-- ============================================-->
-      <!-- <section> begin ============================-->
-      <section class="bg-900 pb-0 pt-5">
-
-        <div class="container">
-          <div class="row">
-            <div class="col-12 col-sm-12 col-lg-6 mb-4 order-0 order-sm-0"><a class="text-decoration-none" href="#"><img src="assets/img/gallery/footer-logo.png" height="51" alt="" /></a>
-              <p class="text-500 my-4">The most trusted Courier<br />company in your area.</p>
-            </div>
-            <div class="col-6 col-sm-4 col-lg-2 mb-3 order-2 order-sm-1">
-              <h5 class="lh-lg fw-bold mb-4 text-light font-sans-serif">Other links </h5>
-              <ul class="list-unstyled mb-md-4 mb-lg-0">
-                <li class="lh-lg"><a class="text-500" href="#!">Blogs</a></li>
-                <li class="lh-lg"><a class="text-500" href="#!">Movers website</a></li>
-                <li class="lh-lg"><a class="text-500" href="#!">Traffic Update</a></li>
-              </ul>
-            </div>
-            <div class="col-6 col-sm-4 col-lg-2 mb-3 order-3 order-sm-2">
-              <h5 class="lh-lg fw-bold text-light mb-4 font-sans-serif">Services</h5>
-              <ul class="list-unstyled mb-md-4 mb-lg-0">
-                <li class="lh-lg"><a class="text-500" href="#!">Corporate goods</a></li>
-                <li class="lh-lg"><a class="text-500" href="#!">Artworks</a></li>
-                <li class="lh-lg"><a class="text-500" href="#!">Documents</a></li>
-              </ul>
-            </div>
-            <div class="col-6 col-sm-4 col-lg-2 mb-3 order-3 order-sm-2">
-              <h5 class="lh-lg fw-bold text-light mb-4 font-sans-serif"> Customer Care</h5>
-              <ul class="list-unstyled mb-md-4 mb-lg-0">
-                <li class="lh-lg"><a class="text-500" href="#!">About Us</a></li>
-                <li class="lh-lg"><a class="text-500" href="#!">Contact US</a></li>
-                <li class="lh-lg"><a class="text-500" href="#!">Get Update</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <!-- end of .container-->
-
-      </section>
-      <!-- <section> close ============================-->
-      <!-- ============================================-->
+      </div>
+                            </div>
+                            </div>
+                            </div>
 
 
 
 
-      <!-- ============================================-->
-      <!-- <section> begin ============================-->
-      <section class="py-0 bg-1000">
 
-        <div class="container">
-          <div class="row justify-content-md-between justify-content-evenly py-4">
-            <div class="col-12 col-sm-8 col-md-6 col-lg-auto text-center text-md-start">
-              <p class="fs--1 my-2 fw-bold text-200">All rights Reserved &copy; Your Company, 2021</p>
-            </div>
-            <div class="col-12 col-sm-8 col-md-6">
-              <p class="fs--1 my-2 text-center text-md-end text-200"> Made with&nbsp;
-                <svg class="bi bi-suit-heart-fill" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#F95C19" viewBox="0 0 16 16">
-                  <path d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z"></path>
-                </svg>&nbsp;by&nbsp;<a class="fw-bold text-primary" href="https://themewagon.com/" target="_blank">ThemeWagon </a>
-              </p>
-            </div>
-          </div>
-        </div>
-        <!-- end of .container-->
+    <!-- For bookig -->
+    <div class="modal fade" id="booking" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="z-index: 99999;">
 
-      </section>
-      <!-- <section> close ============================-->
-      <!-- ============================================-->
+    <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Booking's Details</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div  class="modal-body">
+
+      <form action="{{route('booking')}}" method="post" enctype="multipart/form-data">
+                                    @csrf
+                                    <div class="row">
+                                      <div class="col-md-6">
+                                          <div class="form-group">
+                                            <label for="name">Enter Sender Name:</label>
+                                            <input name="sender_name" type="text" class="form-control" id="name"  placeholder="Enter Sender name">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Sender Email</label>
+                                            <input name="sender_email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Sender email">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="number">Phone Sender Number</label>
+                                            <input name="sender_mobile" type="text" class="form-control" id="number"  placeholder="Enter Sender Number">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="number">Sender Branch</label>
+                                            <input name="sender_branch" type="text" class="form-control" id="name"  placeholder="Enter Sender Branch">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="number">Sender Address</label>
+                                            <input name="sender_address" type="text" class="form-control" id="name"  placeholder="Enter Sender Address">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="number">Sender City</label>
+                                            <input name="sender_city" type="text" class="form-control" id="name"  placeholder="Enter Sender city">
+                                        </div>
+                                      </div>
+                                      <div class="col-md-6">
+                                        <div class="form-group">
+                                          <label for="name">Enter Receiver Name:</label>
+                                          <input name="receiver_name" type="text" class="form-control" id="name"  placeholder="Enter Receiver name">
+                                      </div>
+                                      <div class="form-group">
+                                          <label for="exampleInputEmail1">Receiver Email</label>
+                                          <input name="receiver_email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                                      </div>
+
+                                      <div class="form-group">
+                                          <label for="number">Phone Reciever Number</label>
+                                          <input name="receiver_mobile" type="text" class="form-control" id="number"  placeholder="Enter Receiver Number">
+                                      </div>
+
+                                      <div class="form-group">
+                                          <label for="number">Receiver Branch</label>
+                                          <input name="receiver_branch" type="text" class="form-control" id="name"  placeholder="Enter Receiver Branch">
+                                      </div>
+                                      <div class="form-group">
+                                          <label for="number">Receiver Address</label>
+                                          <input name="receiver_address" type="text" class="form-control" id="name"  placeholder="Enter Receiver Address">
+                                      </div>
+                                      <div class="form-group">
+                                          <label for="number">Receiver City</label>
+                                          <input name="receiver_city" type="text" class="form-control" id="name"  placeholder="Enter Receiver city">
+                                      </div>
+                                      </div>
+                                    </div>
 
 
-    </main>
-    <!-- ===============================================-->
-    <!--    End of Main Content-->
-    <!-- ===============================================-->
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </form>
+      </div>
+    </div>
+  </div>
+ </div>
 
 
 
 
-    <!-- ===============================================-->
-    <!--    JavaScripts-->
-    <!-- ===============================================-->
-    <script src="vendors/@popperjs/popper.min.js"></script>
-    <script src="vendors/bootstrap/bootstrap.min.js"></script>
-    <script src="vendors/is/is.min.js"></script>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
-    <script src="vendors/fontawesome/all.min.js"></script>
-    <script src="assets/js/theme.js"></script>
+</div>
 
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
-  </body>
-
-</html>
+     @endsection

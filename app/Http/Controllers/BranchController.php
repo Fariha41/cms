@@ -10,15 +10,17 @@ class BranchController extends Controller
     
     public function index()
     {
-        $cats=Branch::all();//select * from categories;
+        // $cats=Branch::all();//select * from categories;
 //        dd($cats);
+$cats=Branch::paginate(5);
         return view('backend.pages.branch.index',compact('cats'));
     }
 
     
     public function create()
     {
-        return view('Backend.pages.branch.create');
+        $cats = Branch::all();
+        return view('Backend.pages.branch.create',compact('cats'));
     }
 
     

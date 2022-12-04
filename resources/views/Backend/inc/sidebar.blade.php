@@ -19,7 +19,7 @@
                                 location
                             </a>
 
-                            <a class="nav-link" href="{{('parcel type')}}" >
+                            <a class="nav-link" href="{{route('parcel.type')}}" >
                                 <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
                                 parcel type
                             </a>
@@ -32,9 +32,9 @@
 
                             
 
-                            <a class="nav-link" href="{{('user')}}" >
+                            <a class="nav-link" href="{{route('admin.booking')}}" >
                                 <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
-                                user
+                                Booking
                             </a>
                             <a class="nav-link" href="{{('cargo')}}" >
                                 <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
@@ -48,7 +48,7 @@
                     </div>
                     <div class="sb-sidenav-footer">
                         <div class="small">Logged in as:</div>
-                        Start Bootstrap
+                        Admin
                     </div>
                 </nav>
             </div>

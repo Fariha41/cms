@@ -5,6 +5,10 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\BranchController;
 use App\Http\Controllers\WebController;
+use App\Http\Controllers\ParcelController;
+use App\Http\Controllers\BookingController;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -19,7 +23,7 @@ use App\Http\Controllers\WebController;
 Route::get('/login', [UserController::class, 'login'])->name('login');
 Route::post('/do-login',[UserController::class,'doLogin'])->name('do.login');
 
-Route::group(['middleware'=>'auth'],function (){
+Route::group(['middleware'=>'auth','prefix'=>'admin'],function (){
     Route::get('/', [DashboardController::class, 'Dashboard'])->name('dashboard');
     Route::get('/branch', [BranchController::class, 'index'])->name('branch.index');
     Route::get('/branch/create', [BranchController::class, 'create'])->name('branch.create');
@@ -31,4 +35,30 @@ Route::get('/branch/delete/{branch_id}',[BranchController::class,'deletebranch']
 Route::get('/branch/view/{branch_id}',[BranchController::class,'viewbranch'])->name('admin.branch.view');
 Route::get('/branch/edit/{branch_id}',[BranchController::class,'edit'])->name('branch.edit');
 Route::put('/branch/update/{branch_id}',[BranchController::class,'update'])->name('branch.update');
+
+//parcel type
+
+Route::get('/parcel', [ParcelController::class, 'type'])->name('parcel.type');
+Route::get('/parcel/from', [parcelController::class, 'from'])->name('parcel.from');
+Route::post('/parcel/stores', [parcelController::class, 'stores'])->name('parcel.stores');
+
+Route::get('/parcel/delete/{parcel_id}',[ParcelController::class,'deleteparcel'])->name('admin.parcel.delete');
+Route::get('/parcel/view/{parcel_id}',[parcelController::class,'viewparcel'])->name('admin.parcel.view');
+Route::get('/paecel/edit/{parcel_id}',[parcelController::class,'edit'])->name('parcel.edit');
+Route::put('/parcel/update/{parcel_id}',[parcelController::class,'update'])->name('parcel.update');
+
+
+
+Route::get('/booking', [BookingController::class, 'bookinglist'])->name('admin.booking');
+
+
+
+
+
 });
+Route::get('/',[WebController::class,'web'])->name('webpage');
+Route::post('/register', [WebController::class, 'registration'])->name('registration');
+Route::post('/login', [WebController::class, 'login'])->name('user.login');
+Route::get('/logout', [WebController::class, 'logout'])->name('user.logout');
+Route::post('/booking', [BookingController::class, 'book'])->name('booking');
+Route::get('/booking', [BookingController::class, 'list'])->name('booking');
