@@ -2,27 +2,44 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Models\Parcel;
 use App\Models\Booking;
+use Illuminate\Http\Request;
 
 class BookingController extends Controller
 {
     public function book (Request $request)
     {
+        // dd($request->percel_type);
+        $parcelprice = Parcel::where('id',$request->percel_type)->pluck('unit_price');
+        // dd($parcelprice[0]);
 
        booking::create([
+           'user_id'=>auth()->user()->id,
            'sender_name'=>$request->sender_name,
            'sender_email'=>$request->sender_email, 
            'sender_mobile'=>$request->sender_mobile,
            'sender_branch'=>$request->sender_branch,
            'sender_address'=>$request->sender_address,
            'sender_city'=>$request->sender_city,
+
+
+           'enter_amount'=>$parcelprice[0] * $request->quantity,
+
+
+
            'receiver_name'=>$request->receiver_name,
            'receiver_email'=>$request->receiver_email, 
            'receiver_mobile'=>$request->receiver_mobile,
            'receiver_branch'=>$request->receiver_branch,
            'receiver_address'=>$request->receiver_address,
            'receiver_city'=>$request->receiver_city,
+           'percel_type'=>$request->percel_type,
+
+
+
+           
+           'quantity'=>$request->quantity,
            
                      
         ]);
@@ -65,12 +82,15 @@ class BookingController extends Controller
             'sender_branch'=>$request->sender_branch,
             'sender_address'=>$request->sender_address,
             'sender_city'=>$request->sender_city,
+            'enter_amount'=>$request->enter_amount,
             'receiver_name'=>$request->receiver_name,
             'receiver_email'=>$request->receiver_email, 
             'receiver_mobile'=>$request->receiver_mobile,
             'receiver_branch'=>$request->receiver_branch,
             'receiver_address'=>$request->receiver_address,
             'receiver_city'=>$request->receiver_city,
+            'percel_type'=>$request->percel_type,
+           'quantity'=>$request->quantity,
          ]);
          return redirect()->route('booking.index')->with('message','Update success.');
 

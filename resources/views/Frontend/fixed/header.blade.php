@@ -9,7 +9,7 @@
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#booking">
           Booking
           </button>
-            <li class="nav-item px-2"><a class="nav-link" >Payment</a></li>
+            <!-- <li class="nav-item px-2"><a class="nav-link" >Payment</a></li> -->
             @auth
             <a class="nav-item nav-link">
             {{auth()->user()->name}}</a>

@@ -20,6 +20,8 @@
         <th>sender address</th>
         <th>sender branch</th>
         <th>sender city</th>
+        <th>Amount</th>
+        
        
         </tr>
     </thead>
@@ -31,6 +33,7 @@
             <td>{{$booking->sender_address}}</td>
             <td>{{$booking->sender_branch}}</td>
             <td>{{$booking->sender_city}}</td>
+            <td>{{$booking->enter_amount}}</td>
 
         </tr>
         

@@ -13,7 +13,7 @@
             <div class="col-md-75 col-xl-6 col-xxl-5 text-md-start text-center py-8">
               <h1 class="fw-normal fs-6 fs-xxl-7">A trusted provider of </h1>
               <h1 class="fw-bolder fs-6 fs-xxl-7 mb-2">courier services.</h1>
-              <p class="fs-1 mb-5">We deliver your products safely to <br />your home in a reasonable time. </p><a class="btn btn-primary me-2" href="#!" role="button">Get started<i class="fas fa-arrow-right ms-2"></i></a>
+              <p class="fs-1 mb-5">We deliver your products safely to <br />your home in a reasonable time. </p>
             </div>
           </div>
         </div>
@@ -48,9 +48,7 @@
                     </li>
                   </ul>
                   <div class="text-center my-5">
-                    <div class="d-grid">
-                      <button class="btn btn-outline-danger" type="submit">Learn more </button>
-                    </div>
+                    
                   </div>
                 </div>
               </div>
@@ -71,9 +69,7 @@
                     </li>
                   </ul>
                   <div class="text-center my-5">
-                    <div class="d-grid">
-                      <button class="btn btn-danger hover-top btn-glow border-0" type="submit">Learn more</button>
-                    </div>
+                    
                   </div>
                 </div>
               </div>
@@ -94,9 +90,7 @@
                     </li>
                   </ul>
                   <div class="text-center my-5">
-                    <div class="d-grid">
-                      <button class="btn btn-outline-danger" type="submit">Learn more </button>
-                    </div>
+                    
                   </div>
                 </div>
               </div>
@@ -161,6 +155,7 @@
 
       <!-- ============================================-->
       <!-- <section> begin ============================-->
+      @auth
       <section>
 
         <div class="container">
@@ -177,13 +172,17 @@
         <th>sender address</th>
         <th>sender branch</th>
         <th>sender city</th>
+        
         <th>Receiver name</th>
         <th>Receiver email</th>
         <th>Receiver phone number</th>
         <th>Receiver address</th>
         <th>Receiver branch</th>
         <th>Receiver city</th>
+        <th> Percel Type</th>
+        <th>Quantity</th>
         <th>Status</th>
+        
         </tr>
     </thead>
      <tbody>
@@ -196,12 +195,17 @@
             <td>{{$data->sender_address}}</td>
             <td>{{$data->sender_branch}}</td>
             <td>{{$data->sender_city}}</td>
+            <td>{{$data->enter_amount}}</td>
+
             <td>{{$data->receiver_name}}</td>
             <td>{{$data->receiver_email}}</td>
             <td>{{$data->receiver_mobile}}</td>
             <td>{{$data->receiver_address}}</td>
             <td>{{$data->receiver_branch}}</td>
             <td>{{$data->receiver_city}}</td>
+            <td>{{$data->percel_type}}</td>
+            <td>{{$data->quantity}}</td>
+
             <td>{{$data->status}}</td>
 
         </tr>
@@ -216,6 +220,7 @@
         <!-- end of .container-->
 
       </section>
+      @endauth
       <!-- <section> close ============================-->
       <!-- ============================================-->
 
@@ -553,11 +558,14 @@
                                             <label for="number">Sender City</label>
                                             <input name="sender_city" type="text" class="form-control" id="name"  placeholder="Enter Sender city">
                                         </div>
+                                        
                                       </div>
+
+                                      
                                       <div class="col-md-6">
                                         <div class="form-group">
                                           <label for="name">Enter Receiver Name:</label>
-                                          <input name="receiver_name" type="text" class="form-control" id="name"  placeholder="Enter Receiver name">
+                                          <input name="receiver_name" type="double" class="form-control" id="name"  placeholder="Enter Receiver name">
                                       </div>
                                       <div class="form-group">
                                           <label for="exampleInputEmail1">Receiver Email</label>
@@ -580,6 +588,18 @@
                                       <div class="form-group">
                                           <label for="number">Receiver City</label>
                                           <input name="receiver_city" type="text" class="form-control" id="name"  placeholder="Enter Receiver city">
+                                      </div>
+                                      <div class="form-group">
+                                          <label for="number">Percel Type</label>
+                                            <select name="percel_type">
+                                                  @foreach($percelTypes as $data)
+                                                <option value="{{$data->id}}"> {{$data->parcel_type}}</option>
+                                                @endforeach
+                                            </select>
+                                      </div>
+                                      <div class="form-group">
+                                          <label for="number">Quantity</label>
+                                          <input type="number" name="quantity" placeholder="enter the amount of parcel" class="form-control">
                                       </div>
                                       </div>
                                     </div>

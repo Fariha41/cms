@@ -10,6 +10,7 @@
     
         <th>sender phone number</th>
         <th>sender address</th>
+        <th>Amount</th>
        
         <th>Receiver name</th>
         
@@ -29,7 +30,9 @@
            
             <td>{{$data->sender_mobile}}</td>
             <td>{{$data->sender_address}}</td>
-           
+            
+            <td>{{$data->enter_amount}}</td>
+        
             <td>{{$data->receiver_name}}</td>
             
             <td>{{$data->receiver_mobile}}</td>

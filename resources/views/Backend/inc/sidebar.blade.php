@@ -13,11 +13,11 @@
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 brance
                             </a>
-                            
+<!--                             
                             <a class="nav-link" href="{{('location')}}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
                                 location
-                            </a>
+                            </a> -->
 
                             <a class="nav-link" href="{{route('parcel.type')}}" >
                                 <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
@@ -25,12 +25,12 @@
                             </a>
 
 
-                            <a class="nav-link" href="{{('price set up')}}" >
+                            <!-- <a class="nav-link" href="{{('price set up')}}" >
                                 <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
                                 price set up
                             </a>
 
-                            
+                             -->
 
                             <a class="nav-link" href="{{route('admin.booking')}}" >
                                 <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
