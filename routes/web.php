@@ -1,12 +1,15 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\UserController;
-use App\Http\Controllers\BranchController;
 use App\Http\Controllers\WebController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\CargoController;
+use App\Http\Controllers\BranchController;
 use App\Http\Controllers\ParcelController;
 use App\Http\Controllers\BookingController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\BookingDispatchController;
+use App\Http\Controllers\ContactController;
 
 
 
@@ -54,14 +57,28 @@ Route::get('/booking', [BookingController::class, 'bookinglist'])->name('admin.b
 
 Route::get('/booking/delete/{booking_id}',[BookingController::class,'deletebooking'])->name('admin.booking.delete');
 Route::get('/booking/view/{booking_id}',[BookingController::class,'viewbooking'])->name('admin.booking.view');
-Route::get('/booking/edit/{booking_id}',[BookingController::class,'edit'])->name('booking.edit');
-Route::put('/booking/update/{booking_id}',[BookingController::class,'update'])->name('booking.update');
+Route::get('/booking/deliver/{booking_id}',[BookingController::class,'edit'])->name('booking.deliver');
+
+Route::get('/booking/dispatch/{booking_id}',[BookingDispatchController::class,'bookingDispatch'])->name('booking.dispatch');
+Route::post('/booking/dispatch/{booking_id}',[BookingDispatchController::class,'detailsdispatch'])->name('booking.details');
 
 
+// cargo
+Route::get('/cargo', [CargoController::class, 'type'])->name('cargo.type');
+Route::get('/cargo/from', [CargoController::class, 'from'])->name('cargo.from');
+Route::post('/cargo/stores', [CargoController::class, 'stores'])->name('cargo.stores');
+
+Route::get('/cargo/delete/{cargo_id}',[CargoController::class,'deletecargo'])->name('admin.cargo.delete');
+Route::get('/cargo/view/{cargo_id}',[CargoController::class,'viewcargo'])->name('admin.cargo.view');
+Route::get('/cargo/edit/{cargo_id}',[CargoController::class,'edit'])->name('cargo.edit');
+Route::put('/cargo/update/{cargo_id}',[CargoController::class,'update'])->name('cargo.update');
 
 
-
-
+// dispatchdetails
+Route::get('/dispatchdetails', [BookingDispatchController::class, 'details'])->name('admin.dispatch');
+//  contact
+Route::get('/contact', [ContactController::class, 'see'])->name('admin.contact');
+Route::get('/contact/delete/{contact_id}',[ContactController::class,'deletecontact'])->name('admin.contact.delete');
 
 });
 Route::get('/',[WebController::class,'web'])->name('webpage');
@@ -70,4 +87,8 @@ Route::post('/login', [WebController::class, 'login'])->name('user.login');
 Route::get('/logout', [WebController::class, 'logout'])->name('user.logout');
 Route::post('/booking', [BookingController::class, 'book'])->name('booking');
 Route::get('/booking', [BookingController::class, 'list'])->name('booking');
+Route::get('/contact', [ContactController::class, 'message'])->name('contact');
+Route::post('/contact/store', [ContactController::class, 'store'])->name('contact.store');
+
+
 

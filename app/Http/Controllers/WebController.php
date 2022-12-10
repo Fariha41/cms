@@ -5,19 +5,22 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use App\Models\Parcel;
 use App\Models\Booking;
+use App\Models\Branch;
 use Illuminate\Http\Request;
 
 class WebController extends Controller
 {
     public function web(){
         $percelTypes = Parcel::all();
+        $branch = Branch::all();
+     
         if(auth()->user()){
 
             $list = Booking::where('user_id',auth()->user()->id)->get();
-            return view('Frontend.pages.home',compact('list','percelTypes'));
+            return view('Frontend.pages.home',compact('list','percelTypes','branch'));
         }
         else{
-            return view('Frontend.pages.home',compact('percelTypes'));
+            return view('Frontend.pages.home',compact('percelTypes','branch'));
         }
     }
     public function registration(Request $request)

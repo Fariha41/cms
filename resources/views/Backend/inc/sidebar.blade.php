@@ -36,10 +36,22 @@
                                 <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
                                 Booking
                             </a>
-                            <a class="nav-link" href="{{('cargo')}}" >
+                            <a class="nav-link" href="{{route('cargo.type')}}" >
                                 <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
                                 cargo
                             </a>
+                              
+                            <a class="nav-link" href="{{route('admin.dispatch')}}" >
+                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                                Dispatch Details
+                            </a>
+
+                            <a class="nav-link" href="{{route('admin.contact')}}" >
+                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                               Contact Details
+                            </a>
+
+
                             <a class="nav-link" href="{{('report')}}" >
                                 <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
                                 report

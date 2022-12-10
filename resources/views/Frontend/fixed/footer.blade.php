@@ -7,19 +7,21 @@
               <h2>We will contact in the shortest time.</h2>
               <p class="text-muted">Monday to Friday, 9am-5pm.</p>
             </div>
+            
             <div class="col-md-6 col-lg-5 col-xl-4">
-              <form class="row">
+              <form action="{{route('contact.store')}}" class="row" method="post">
+                @csrf
                 <div class="mb-3">
                   <label class="form-label visually-hidden" for="inputName">Name</label>
-                  <input class="form-control form-quriar-control" id="inputName" type="text" placeholder="Name" />
+                  <input class="form-control form-quriar-control" id="inputName" type="text" placeholder="Name" name="name"/>
                 </div>
                 <div class="mb-3">
                   <label class="form-label visually-hidden" for="inputEmail">Another label</label>
-                  <input class="form-control form-quriar-control" id="inputEmail" type="email" placeholder="Email" />
+                  <input class="form-control form-quriar-control" id="inputEmail" type="email" placeholder="Email" name="email" />
                 </div>
                 <div class="mb-5">
                   <label class="form-label visually-hidden" for="validationTextarea">Message</label>
-                  <textarea class="form-control form-quriar-control is-invalid border-400" id="validationTextarea" placeholder="Message" style="height: 150px" required="required"></textarea>
+                  <textarea class="form-control form-quriar-control is-invalid border-400" id="validationTextarea" placeholder="Message" name="message" style="height: 150px" required="required"></textarea>
                 </div>
                 <div class="d-grid">
                   <button class="btn btn-primary" type="submit">Send Message<i class="fas fa-paper-plane ms-2"></i></button>

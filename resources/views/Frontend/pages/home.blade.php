@@ -167,11 +167,10 @@
         <tr>
         <th scope="row">1</th>
         <th>sender name</th>
-        <th>sender email</th>
+        
         <th>sender phone number</th>
-        <th>sender address</th>
-        <th>sender branch</th>
-        <th>sender city</th>
+        <th>Amount</th>
+        
         
         <th>Receiver name</th>
         <th>Receiver email</th>
@@ -190,11 +189,9 @@
         <tr>
             <th scope="row">{{$data->id}}</th>
             <td>{{$data->sender_name}}</td>
-            <td>{{$data->sender_email}}</td>
+            
             <td>{{$data->sender_mobile}}</td>
-            <td>{{$data->sender_address}}</td>
-            <td>{{$data->sender_branch}}</td>
-            <td>{{$data->sender_city}}</td>
+            
             <td>{{$data->enter_amount}}</td>
 
             <td>{{$data->receiver_name}}</td>
@@ -548,7 +545,12 @@
 
                                         <div class="form-group">
                                             <label for="number">Sender Branch</label>
-                                            <input name="sender_branch" type="text" class="form-control" id="name"  placeholder="Enter Sender Branch">
+                                            <select name="sender_branch">
+                                                @foreach($branch as $data)
+                                                  <option value="{{$data->id}}">{{$data->Brance_name}}</option>
+                                                @endforeach
+                                            </select>
+                                            
                                         </div>
                                         <div class="form-group">
                                             <label for="number">Sender Address</label>
@@ -579,7 +581,12 @@
 
                                       <div class="form-group">
                                           <label for="number">Receiver Branch</label>
-                                          <input name="receiver_branch" type="text" class="form-control" id="name"  placeholder="Enter Receiver Branch">
+                
+                                          <select name="receiver_branch">
+                                                @foreach($branch as $data)
+                                                  <option value="{{$data->id}}">{{$data->Brance_name}}</option>
+                                                @endforeach
+                                            </select>
                                       </div>
                                       <div class="form-group">
                                           <label for="number">Receiver Address</label>

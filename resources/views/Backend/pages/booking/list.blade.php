@@ -30,20 +30,18 @@
            
             <td>{{$data->sender_mobile}}</td>
             <td>{{$data->sender_address}}</td>
-            
             <td>{{$data->enter_amount}}</td>
-        
-            <td>{{$data->receiver_name}}</td>
-            
-            <td>{{$data->receiver_mobile}}</td>
-            <td>{{$data->receiver_address}}</td>
-           
-            
+            <td>{{$data->receiver_name}}</td> 
+          <td>{{$data->receiver_mobile}}</td>
+            <td>{{$data->receiver_address}}</td>           
             <td>{{$data->status}}</td>
             <td>
-                <a href="{{route('booking.edit',$data->id)}}" class="btn btn-primary">Update</a>
+                @if($data->status!='delivered')
+                <a href="{{route('booking.deliver',$data->id)}}" class="btn btn-primary">Delivered</a>
+                @endif
                 <a href="{{route('admin.booking.delete',$data->id)}}" class="btn btn-danger">Delete</a>
                 <a href="{{route('admin.booking.view',$data->id)}}" class="btn btn-success">View</a>
+                <a href="{{route('booking.dispatch',$data->id)}}" class="btn btn-success">Dispatch</a>
             </td>
 
         </tr>
