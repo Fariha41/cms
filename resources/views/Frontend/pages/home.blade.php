@@ -455,10 +455,7 @@
                                     <button type="submit" class="btn btn-primary">Submit</button>
                                 </form>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Submit</button>
-      </div>
+      
     </div>
   </div>
 </div>
@@ -525,7 +522,7 @@
       </div>
       <div  class="modal-body">
 
-      <form action="{{route('booking')}}" method="post" enctype="multipart/form-data">
+      <form action="{{route('ssl.payment')}}" method="post" enctype="multipart/form-data">
                                     @csrf
                                     <div class="row">
                                       <div class="col-md-6">

@@ -6,10 +6,13 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\CargoController;
 use App\Http\Controllers\BranchController;
 use App\Http\Controllers\ParcelController;
+use App\Http\Controllers\ReportController;
 use App\Http\Controllers\BookingController;
-use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\BookingDispatchController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\CustomerlistController;
+use App\Http\Controllers\BookingDispatchController;
+use App\Http\Controllers\SslCommerzPaymentController;
 
 
 
@@ -28,6 +31,9 @@ Route::post('/do-login',[UserController::class,'doLogin'])->name('do.login');
 
 Route::group(['middleware'=>'auth','prefix'=>'admin'],function (){
     Route::get('/', [DashboardController::class, 'Dashboard'])->name('dashboard');
+    // customerlist
+     Route::get('/user',[CustomerlistController::class, 'customerlist'])->name('customer.index');
+     Route::get('/user/delete/{user_id}',[CustomerlistController::class,'deletecustomerlist'])->name('admin.customerlist.delete');
     // branch
     Route::get('/branch', [BranchController::class, 'index'])->name('branch.index');
     Route::get('/branch/create', [BranchController::class, 'create'])->name('branch.create');
@@ -80,15 +86,33 @@ Route::get('/dispatchdetails', [BookingDispatchController::class, 'details'])->n
 Route::get('/contact', [ContactController::class, 'see'])->name('admin.contact');
 Route::get('/contact/delete/{contact_id}',[ContactController::class,'deletecontact'])->name('admin.contact.delete');
 
+// report
+Route::get('/report',[ReportController::class,'report'])->name('booking.report');
+Route::get('/report/search',[ReportController::class,'reportSearch'])->name('booking.report.search');
+
 });
 Route::get('/',[WebController::class,'web'])->name('webpage');
 Route::post('/register', [WebController::class, 'registration'])->name('registration');
 Route::post('/login', [WebController::class, 'login'])->name('user.login');
+
 Route::get('/logout', [WebController::class, 'logout'])->name('user.logout');
 Route::post('/booking', [BookingController::class, 'book'])->name('booking');
 Route::get('/booking', [BookingController::class, 'list'])->name('booking');
 Route::get('/contact', [ContactController::class, 'message'])->name('contact');
 Route::post('/contact/store', [ContactController::class, 'store'])->name('contact.store');
+Route::get('/profile',[WebController::class,'profile'])->name('user.profile');
+Route::put('/profile/update',[WebController::class,'updateProfile'])->name('profile.update');
+
+
+
+
+Route::post('/pay', [SslCommerzPaymentController::class, 'index'])->name('ssl.payment');
+ Route::post('/success', [SslCommerzPaymentController::class, 'success']);
+Route::post('/fail', [SslCommerzPaymentController::class, 'fail']);
+ Route::post('/cancel', [SslCommerzPaymentController::class, 'cancel']);
+
+
+
 
 
 

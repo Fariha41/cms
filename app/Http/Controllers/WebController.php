@@ -60,4 +60,29 @@ class WebController extends Controller
         notify()->success('logout success');
         return redirect()->back();
     }
+    public function profile()
+    {
+        return view('Frontend.pages.profile');
+    }
+
+    public function updateProfile(Request $request){
+            // dd($request->all());
+       //validation
+
+        $user=User::find(auth()->user()->id);
+        $user->update([
+            'name'=>$request->name,
+           'email'=>$request->email,
+           'mobile'=>$request->mobile,
+           'password'=> bcrypt($request->password),
+           
+           
+        ]);
+
+        notify()->success('User profile updated.');
+        return redirect()->route('webpage');
+    }
+
+
+
 }

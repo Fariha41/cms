@@ -21,6 +21,13 @@
         <!-- Main Content -->
         <main>
             <div class="container">
+                <div class="container mt-3">
+                @if($errors->any())
+    @foreach ($errors->all() as $error)
+        <p class="text-danger">{{ $error }}</p>
+    @endforeach
+@endif
+                </div>
                 @yield('contents')
             </div>
         </main>
