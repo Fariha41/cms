@@ -22,12 +22,7 @@ class BookingController extends Controller
            'sender_branch'=>$request->sender_branch,
            'sender_address'=>$request->sender_address,
            'sender_city'=>$request->sender_city,
-
-
            'enter_amount'=>$parcelprice[0] * $request->quantity,
-
-
-
            'receiver_name'=>$request->receiver_name,
            'receiver_email'=>$request->receiver_email, 
            'receiver_mobile'=>$request->receiver_mobile,
@@ -35,13 +30,7 @@ class BookingController extends Controller
            'receiver_address'=>$request->receiver_address,
            'receiver_city'=>$request->receiver_city,
            'percel_type'=>$request->percel_type,
-
-
-
-           
-           'quantity'=>$request->quantity,
-           
-                     
+           'quantity'=>$request->quantity,     
         ]);
         notify()->success('Booking successfull');
 
@@ -49,16 +38,15 @@ class BookingController extends Controller
         return redirect()->back();
     } 
     public function bookinglist(){
-        $bookingList = Booking::all();
+        $bookingList = Booking::orderBy('id','desc')->get();
         return view('Backend.pages.booking.list',compact('bookingList'));
     }
 
-
-
-
-
     public function deletebooking($booking_id){
-        booking::find($booking_id)->delete();
+        $booking = booking::find($booking_id);
+        $booking->dispatchs()->delete();
+
+        $booking->delete();
         return redirect()->back()->with('message','booking deleted successfully.');
     }
     public function viewbooking($booking_id)

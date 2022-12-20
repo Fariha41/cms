@@ -5,7 +5,7 @@
     <table class="table">
     <thead class="thead-dark">
         <tr>
-            <th scope="row">1</th>
+            <th scope="row">#</th>
             <th>sender name</th>
             <th>sender phone number</th>
             <th>sender address</th>
@@ -18,11 +18,10 @@
         </tr>
     </thead>
     <tbody>
-        @foreach($bookingList as $data)
+        @foreach($bookingList as $key => $data)
         <tr>
-            <th scope="row">{{$data->id}}</th>
+            <th scope="row">{{ $key + 1}}</th>
             <td>{{$data->sender_name}}</td>
-           
             <td>{{$data->sender_mobile}}</td>
             <td>{{$data->sender_address}}</td>
             <td>{{$data->enter_amount}}</td>

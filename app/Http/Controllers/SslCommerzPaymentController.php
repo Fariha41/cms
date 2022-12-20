@@ -7,6 +7,8 @@ use App\Models\Parcel;
 use Illuminate\Http\Request;
 use App\Library\SslCommerz\SslCommerzNotification;
 use App\Models\Booking;
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 
 class SslCommerzPaymentController extends Controller
 {
@@ -56,7 +58,7 @@ class SslCommerzPaymentController extends Controller
         $post_data['product_profile'] = "physical-goods";
 
         # OPTIONAL PARAMETERS
-        $post_data['value_a'] = "ref001";
+        $post_data['value_a'] = auth()->user()->id;
         $post_data['value_b'] = "ref002";
         $post_data['value_c'] = "ref003";
         $post_data['value_d'] = "ref004";
@@ -70,12 +72,7 @@ class SslCommerzPaymentController extends Controller
             'sender_branch'=>$request->sender_branch,
             'sender_address'=>$request->sender_address,
             'sender_city'=>$request->sender_city,
- 
- 
             'enter_amount'=>$parcelprice[0] * $request->quantity,
- 
- 
- 
             'receiver_name'=>$request->receiver_name,
             'receiver_email'=>$request->receiver_email, 
             'receiver_mobile'=>$request->receiver_mobile,
@@ -83,13 +80,7 @@ class SslCommerzPaymentController extends Controller
             'receiver_address'=>$request->receiver_address,
             'receiver_city'=>$request->receiver_city,
             'percel_type'=>$request->percel_type,
- 
- 
- 
-            
-            'quantity'=>$request->quantity,
-            
-                      
+            'quantity'=>$request->quantity,       
          ]);
 
         $sslc = new SslCommerzNotification();
@@ -107,18 +98,17 @@ class SslCommerzPaymentController extends Controller
 
     public function success(Request $request)
     {
-        echo "Transaction is Successful";
+        $user = User::find($request['value_a']);
+        Auth::login($user, true);
+        notify()->success('Transaction is successfull');
+        return redirect()->route('webpage');
 
-        $tran_id = $request->input('tran_id');
-        $amount = $request->input('amount');
-        $currency = $request->input('currency');
-
-        $sslc = new SslCommerzNotification();
-
+        // echo "Transaction is Successful";
+        // $tran_id = $request->input('tran_id');
+        // $amount = $request->input('amount');
+        // $currency = $request->input('currency');
+        // $sslc = new SslCommerzNotification();
         #Check order status in order tabel against the transaction id or order id.
-        
-
-
     }
 
     public function fail(Request $request)

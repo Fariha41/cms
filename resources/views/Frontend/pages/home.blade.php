@@ -424,7 +424,7 @@
     <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Registration</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Customer Registration</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -435,21 +435,21 @@
                                     @csrf
                                     <div class="form-group">
                                         <label for="name">Enter Your Name:</label>
-                                        <input name="customer_name" type="text" class="form-control" id="name"  placeholder="Enter name">
+                                        <input required name="customer_name" type="text" class="form-control" id="name"  placeholder="Enter name">
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Email address</label>
-                                        <input name="customer_email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                                        <input required name="customer_email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
                                     </div>
 
                                     <div class="form-group">
                                         <label for="number">Phone Number</label>
-                                        <input name="customer_phone" type="text" class="form-control" id="number"  placeholder="Enter Number">
+                                        <input required name="customer_phone" type="text" class="form-control" id="number"  placeholder="Enter Number">
                                     </div>
 
                                     <div class="form-group">
                                         <label for="exampleInputPassword1">Password</label>
-                                        <input name="customer_password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                                        <input required name="customer_password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
                                     </div>
 
                                     <button type="submit" class="btn btn-primary">Submit</button>
@@ -469,11 +469,11 @@
 
 
 <!-- Modal -->
-<div class="modal fade" id="log"  role="dialog" aria-labelledby="exampleModalLabel"                     aria-hidden="true" style="z-index: 99999;">
+<div class="modal fade" id="log"  role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="z-index: 99999;">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Customer Login</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -485,12 +485,12 @@
 
                                     <div>
                                         <label for="">Enter your email</label>
-                                        <input name="email" type="email" class="form-control" required placeholder="Enter email">
+                                        <input required name="email" type="email" class="form-control" required placeholder="Enter email">
                                     </div>
 
                                     <div>
                                         <label for="">Enter your password</label>
-                                        <input name="password" type="password" class="form-control" required placeholder="Enter password">
+                                        <input required name="password" type="password" class="form-control" required placeholder="Enter password">
                                     </div>
 
                                 </div>
@@ -536,7 +536,7 @@
                                         </div>
 
                                         <div class="form-group">
-                                            <label for="number">Phone Sender Number</label>
+                                            <label for="number">Sender Phone Number</label>
                                             <input name="sender_mobile" type="text" class="form-control" id="number"  placeholder="Enter Sender Number">
                                         </div>
 
@@ -572,7 +572,7 @@
                                       </div>
 
                                       <div class="form-group">
-                                          <label for="number">Phone Reciever Number</label>
+                                          <label for="number">Reciever Phone Number</label>
                                           <input name="receiver_mobile" type="text" class="form-control" id="number"  placeholder="Enter Receiver Number">
                                       </div>
 

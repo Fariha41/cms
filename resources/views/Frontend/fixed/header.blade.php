@@ -17,8 +17,8 @@
             <li class="nav-item px-2"><a href="{{route('user.logout')}}" class="nav-link" >Logout</a></li>
             @else
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#log">
-          Login
-          </button>
+              Login
+            </button>
 
 
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#register">

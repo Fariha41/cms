@@ -25,7 +25,7 @@ class WebController extends Controller
     }
     public function registration(Request $request)
     {
-
+         
        User::create([
            'name'=>$request->customer_name,
            'email'=>$request->customer_email,

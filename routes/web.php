@@ -30,6 +30,7 @@ Route::get('/login', [UserController::class, 'login'])->name('login');
 Route::post('/do-login',[UserController::class,'doLogin'])->name('do.login');
 
 Route::group(['middleware'=>'auth','prefix'=>'admin'],function (){
+    Route::get('/logout', [UserController::class, 'logout'])->name('logout');
     Route::get('/', [DashboardController::class, 'Dashboard'])->name('dashboard');
     // customerlist
      Route::get('/user',[CustomerlistController::class, 'customerlist'])->name('customer.index');
@@ -104,12 +105,10 @@ Route::get('/profile',[WebController::class,'profile'])->name('user.profile');
 Route::put('/profile/update',[WebController::class,'updateProfile'])->name('profile.update');
 
 
-
-
 Route::post('/pay', [SslCommerzPaymentController::class, 'index'])->name('ssl.payment');
- Route::post('/success', [SslCommerzPaymentController::class, 'success']);
+Route::post('/success', [SslCommerzPaymentController::class, 'success']);
 Route::post('/fail', [SslCommerzPaymentController::class, 'fail']);
- Route::post('/cancel', [SslCommerzPaymentController::class, 'cancel']);
+Route::post('/cancel', [SslCommerzPaymentController::class, 'cancel']);
 
 
 
