@@ -528,34 +528,34 @@
                                       <div class="col-md-6">
                                           <div class="form-group">
                                             <label for="name">Enter Sender Name:</label>
-                                            <input name="sender_name" type="text" class="form-control" id="name"  placeholder="Enter Sender name">
+                                            <input required name="sender_name" type="text" class="form-control" id="name"  placeholder="Enter Sender name">
                                         </div>
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">Sender Email</label>
-                                            <input name="sender_email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Sender email">
+                                            <input required name="sender_email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Sender email">
                                         </div>
 
                                         <div class="form-group">
                                             <label for="number">Sender Phone Number</label>
-                                            <input name="sender_mobile" type="text" class="form-control" id="number"  placeholder="Enter Sender Number">
+                                            <input required name="sender_mobile" type="text" class="form-control" id="number"  placeholder="Enter Sender Number">
                                         </div>
 
                                         <div class="form-group">
                                             <label for="number">Sender Branch</label>
                                             <select name="sender_branch">
                                                 @foreach($branch as $data)
-                                                  <option value="{{$data->id}}">{{$data->Brance_name}}</option>
+                                                  <option  repuired value="{{$data->id}}">{{$data->Brance_name}}</option>
                                                 @endforeach
                                             </select>
                                             
                                         </div>
                                         <div class="form-group">
                                             <label for="number">Sender Address</label>
-                                            <input name="sender_address" type="text" class="form-control" id="name"  placeholder="Enter Sender Address">
+                                            <input required name="sender_address" type="text" class="form-control" id="name"  placeholder="Enter Sender Address">
                                         </div>
                                         <div class="form-group">
                                             <label for="number">Sender City</label>
-                                            <input name="sender_city" type="text" class="form-control" id="name"  placeholder="Enter Sender city">
+                                            <input required name="sender_city" type="text" class="form-control" id="name"  placeholder="Enter Sender city">
                                         </div>
                                         
                                       </div>
@@ -564,22 +564,22 @@
                                       <div class="col-md-6">
                                         <div class="form-group">
                                           <label for="name">Enter Receiver Name:</label>
-                                          <input name="receiver_name" type="double" class="form-control" id="name"  placeholder="Enter Receiver name">
+                                          <input required name="receiver_name" type="double" class="form-control" id="name"  placeholder="Enter Receiver name">
                                       </div>
                                       <div class="form-group">
                                           <label for="exampleInputEmail1">Receiver Email</label>
-                                          <input name="receiver_email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                                          <input required name="receiver_email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
                                       </div>
 
                                       <div class="form-group">
                                           <label for="number">Reciever Phone Number</label>
-                                          <input name="receiver_mobile" type="text" class="form-control" id="number"  placeholder="Enter Receiver Number">
+                                          <input required name="receiver_mobile" type="text" class="form-control" id="number"  placeholder="Enter Receiver Number">
                                       </div>
 
                                       <div class="form-group">
-                                          <label for="number">Receiver Branch</label>
+                                          <label required for="number">Receiver Branch</label>
                 
-                                          <select name="receiver_branch">
+                                          <select required name="receiver_branch">
                                                 @foreach($branch as $data)
                                                   <option value="{{$data->id}}">{{$data->Brance_name}}</option>
                                                 @endforeach
@@ -587,15 +587,15 @@
                                       </div>
                                       <div class="form-group">
                                           <label for="number">Receiver Address</label>
-                                          <input name="receiver_address" type="text" class="form-control" id="name"  placeholder="Enter Receiver Address">
+                                          <input required name="receiver_address" type="text" class="form-control" id="name"  placeholder="Enter Receiver Address">
                                       </div>
                                       <div class="form-group">
                                           <label for="number">Receiver City</label>
-                                          <input name="receiver_city" type="text" class="form-control" id="name"  placeholder="Enter Receiver city">
+                                          <input required name="receiver_city" type="text" class="form-control" id="name"  placeholder="Enter Receiver city">
                                       </div>
                                       <div class="form-group">
                                           <label for="number">Percel Type</label>
-                                            <select name="percel_type">
+                                            <select required name="percel_type">
                                                   @foreach($percelTypes as $data)
                                                 <option value="{{$data->id}}"> {{$data->parcel_type}}</option>
                                                 @endforeach
@@ -603,7 +603,7 @@
                                       </div>
                                       <div class="form-group">
                                           <label for="number">Quantity</label>
-                                          <input type="number" name="quantity" placeholder="enter the amount of parcel" class="form-control">
+                                          <input required type="number" name="quantity" placeholder="enter the amount of parcel" class="form-control">
                                       </div>
                                       </div>
                                     </div>

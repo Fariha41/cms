@@ -7,23 +7,23 @@
 @csrf
 
             <label for="name">Vehicle Number</label>
-            <input value="vehicle_number" required name="vehicle_number" type="text" class="form-control" id="name" placeholder="vehicle number" >
+            <input  required name="vehicle_number" type="text" class="form-control" id="name" placeholder="vehicle number" >
             
         </div>
         <div class="form-group">
             <label for="name">Drivers Name</label>
-            <input value="drivers_name" name="drivers_name" type="text" class="form-control" id="name"placeholder="drivers name">
+            <input required  name="drivers_name" type="text" class="form-control" id="name"placeholder="drivers name">
         </div>
 
         <div class="form-group">
             <label for="name">Drivers License</label>
-            <input value="drivers_license" name="drivers_license" type="text" class="form-control" id="name" placeholder="drivers license">
+            <input required  name="drivers_license" type="text" class="form-control" id="name" placeholder="drivers license">
 
             
         </div>
        <div class="form-group">
             <label for="name">Vehicle Capacity</label>
-            <input value="vehicle_capacity" name="vehicle_capacity" type="text" class="form-control" id="name" placeholder="vehicle capacity">
+            <input required   name="vehicle_capacity" type="text" class="form-control" id="name" placeholder="vehicle capacity">
 
             
         </div>
@@ -31,7 +31,7 @@
         <div class="form-group">
             <label for="">Select Status</label>
             <select name="cargo_status" id="" class="form-control">
-                <option >Active</option>
+                <option > Active</option>
                 <option>Inactive</option>
             </select>
         </div>

@@ -25,7 +25,14 @@ class WebController extends Controller
     }
     public function registration(Request $request)
     {
-         
+
+         $request->validate([
+            'customer_name'=>'required',
+           'customer_email'=>'required|unique:users,email',
+           'customer_phone'=>'required',
+           'password'=>'customer_password',
+
+         ]);
        User::create([
            'name'=>$request->customer_name,
            'email'=>$request->customer_email,

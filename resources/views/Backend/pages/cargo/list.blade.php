@@ -32,8 +32,8 @@
                 <td>{{$cargo->cargo_status}}</td>
                 <td>
                 <a href="{{route('cargo.edit',$cargo->id)}}" class="btn btn-primary">Update</a>
-                <a href="{{route('admin.cargo.delete',$cargo->id)}}" class="btn btn-danger">Delete</a>
-                <a href="{{route('admin.cargo.view',$cargo->id)}}" class="btn btn-success">View</a>
+                <!-- <a href="{{route('admin.cargo.delete',$cargo->id)}}" class="btn btn-danger">Delete</a>
+                <a href="{{route('admin.cargo.view',$cargo->id)}}" class="btn btn-success">View</a> -->
             </td>
                    
                 </tr>

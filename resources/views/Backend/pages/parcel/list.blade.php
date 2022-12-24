@@ -28,8 +28,8 @@
                     <td>{{$data->unit_price}}</td>
                     <td>
                         <a href="{{route('parcel.edit',$data->id)}}" class="btn btn-primary">Update</a>
-                        <a href="{{route('admin.parcel.delete',$data->id)}}" class="btn btn-danger">Delete</a>
-                        <a href="{{route('admin.parcel.view',$data->id)}}" class="btn btn-success">View</a>
+                        <!-- <a href="{{route('admin.parcel.delete',$data->id)}}" class="btn btn-danger">Delete</a>
+                        <a href="{{route('admin.parcel.view',$data->id)}}" class="btn btn-success">View</a> -->
                     </td>
                 
                 </tr>

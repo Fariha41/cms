@@ -20,7 +20,12 @@ class ParcelController extends Controller
     }
     public function stores(Request $request)
     {
-         // dd($request->all());
+        $request->validate([
+            'type'=>'required',
+            'unit_price'=>'required',
+
+        ]);  
+          // dd($request->all());
          parcel::create ([
             //database column name => input field name
                 'parcel_type'=>$request->type,

@@ -23,7 +23,7 @@
                     <div class="row mt-3">
                     <div class="col-md-12"><label class="labels">Email ID</label><input readonly type="text" class="form-control" placeholder="enter email id" value="{{auth()->user()->email}}" name="email"></div>
                         <div class="col-md-12"><label class="labels">Phone Number</label><input name="mobile" type="text" class="form-control" placeholder="enter mobile number" value="{{auth()->user()->mobile}}"></div>
-                        <div class="col-md-12"><label class="labels">Password</label><input name="password" type="text" class="form-control" placeholder="enter password" value="{{auth()->user()->password}}"></div>
+                        
                         
                        </div>
 
@@ -31,12 +31,14 @@
                         <button class="btn btn-primary profile-button" type="submit">Update Profile</button>
                     </div>
                     </form>
+                   
 
 
                 </div>
             </div>
-
+              
         </div>
     </div>
+   
 
 @endsection

@@ -21,14 +21,25 @@
         <!-- Main Content -->
         <main>
             <div class="container">
-                <div class="container mt-3">
-                @if($errors->any())
-    @foreach ($errors->all() as $error)
-        <p class="text-danger">{{ $error }}</p>
-    @endforeach
-@endif
+                <div class="container">
+                    <div class="container bg-danger">
+
+                        @if ($errors->any())
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
+                    </div>
+                    <div class="container">
+    
+                        @yield('contents')
+                    </div>
                 </div>
-                @yield('contents')
+
             </div>
         </main>
 

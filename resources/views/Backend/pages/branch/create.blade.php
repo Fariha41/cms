@@ -13,12 +13,12 @@
 
         <div class="form-group">
             <label for="name">Brance phone</label>
-            <input name="Branch_phone"type="text" class="form-control" id="name"placeholder="Brance phone">
+            <input required name="Branch_phone"type="text" class="form-control" id="name"placeholder="Brance phone">
         </div>
 
         <div class="form-group">
             <label for="name">Brance address</label>
-            <input name="Brance_address" type="text" class="form-control" id="name" placeholder="Brance address">
+            <input required name="Brance_address" type="text" class="form-control" id="name" placeholder="Brance address">
 
             
         </div>
@@ -26,8 +26,8 @@
         <div class="form-group">
             <label for="">Select Status</label>
             <select name="Branch_status" id="" class="form-control">
-                <option value="active">Active</option>
-                <option value="inactive">Inactive</option>
+                <option required value="active">Active</option>
+                <option required value="inactive">Inactive</option>
             </select>
         </div>
        

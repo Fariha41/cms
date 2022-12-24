@@ -16,8 +16,8 @@ return new class extends Migration
         Schema::create('cargos', function (Blueprint $table) {
             $table->id();
             $table->string('vehicle_number');
-            $table->string('drivers_name');
-            $table->string('drivers_license');
+            $table->text('drivers_name');
+            $table->text('drivers_license');
             $table->string('vehicle_capacity');
             $table->string('cargo_status');
             

@@ -64,6 +64,9 @@ class SslCommerzPaymentController extends Controller
         $post_data['value_d'] = "ref004";
 
         #Before  going to initiate the payment order status need to insert or update as Pending.
+        
+        $parcelprice = Parcel::where('id',$request->percel_type)->pluck('unit_price');
+        // dd($parcelprice);
         booking::create([
             'user_id'=>auth()->user()->id,
             'sender_name'=>$request->sender_name,
@@ -81,7 +84,7 @@ class SslCommerzPaymentController extends Controller
             'receiver_city'=>$request->receiver_city,
             'percel_type'=>$request->percel_type,
             'quantity'=>$request->quantity,       
-         ]);
+        ]);
 
         $sslc = new SslCommerzNotification();
         # initiate(Transaction Data , false: Redirect to SSLCOMMERZ gateway/ true: Show all the Payement gateway here )
@@ -97,11 +100,13 @@ class SslCommerzPaymentController extends Controller
     
 
     public function success(Request $request)
-    {
-        $user = User::find($request['value_a']);
-        Auth::login($user, true);
-        notify()->success('Transaction is successfull');
-        return redirect()->route('webpage');
+    {   
+        // dd(auth()->user());
+        // $user = User::find($request['value_a']);
+        // Auth::login($user, true);
+        // notify()->success('Transaction is successfull');
+
+        // return redirect()->route('webpage');
 
         // echo "Transaction is Successful";
         // $tran_id = $request->input('tran_id');
@@ -109,18 +114,27 @@ class SslCommerzPaymentController extends Controller
         // $currency = $request->input('currency');
         // $sslc = new SslCommerzNotification();
         #Check order status in order tabel against the transaction id or order id.
+        // dd($request->all());
+        notify()->success('success','payment done successfully');
+        return back();
+            
+        
     }
 
     public function fail(Request $request)
     {
-       
+        notify()->success('Transaction is not successfull');
+
+        return redirect()->route('webpage');
 
     }
 
     public function cancel(Request $request)
     {
         
+        notify()->success('Transaction is cancelled');
 
+        return redirect()->route('webpage');
 
     }
 

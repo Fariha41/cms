@@ -96,6 +96,8 @@ Route::get('/',[WebController::class,'web'])->name('webpage');
 Route::post('/register', [WebController::class, 'registration'])->name('registration');
 Route::post('/login', [WebController::class, 'login'])->name('user.login');
 
+Route::group(['middleware'=>'auth'],function(){
+
 Route::get('/logout', [WebController::class, 'logout'])->name('user.logout');
 Route::post('/booking', [BookingController::class, 'book'])->name('booking');
 Route::get('/booking', [BookingController::class, 'list'])->name('booking');
@@ -103,7 +105,7 @@ Route::get('/contact', [ContactController::class, 'message'])->name('contact');
 Route::post('/contact/store', [ContactController::class, 'store'])->name('contact.store');
 Route::get('/profile',[WebController::class,'profile'])->name('user.profile');
 Route::put('/profile/update',[WebController::class,'updateProfile'])->name('profile.update');
-
+});
 
 Route::post('/pay', [SslCommerzPaymentController::class, 'index'])->name('ssl.payment');
 Route::post('/success', [SslCommerzPaymentController::class, 'success']);

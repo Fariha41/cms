@@ -5,7 +5,7 @@
 
 <div class="form-group">
  <label for="name">type</label>
- <input type="text" class="form-control" id="name" placeholder="type" name="type">
+ <input  type="text" class="form-control" id="name" placeholder="type" name="type">
             
  </div>
  <div class="form-group">
