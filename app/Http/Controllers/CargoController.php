@@ -23,7 +23,6 @@ Cargo::create ([
         'vehicle_number'=>$request->vehicle_number ,
         'drivers_name'=>$request->drivers_name,
         'drivers_license'=>$request->drivers_license,
-        'vehicle_capacity'=>$request->vehicle_capacity,
         'cargo_status'=>$request->cargo_status,
  ]);
  
@@ -53,7 +52,6 @@ public function update(Request $request,$cargo_id){
         'vehicle_number'=>$request->vehicle_number ,
         'drivers_name'=>$request->drivers_name,
         'drivers_license'=>$request->drivers_license,
-        'vehicle_capacity'=>$request->vehicle_capacity,
         'cargo_status'=>$request->cargo_status,
  ]);
      return redirect()->route('cargo.type')->with('message','Update success.');

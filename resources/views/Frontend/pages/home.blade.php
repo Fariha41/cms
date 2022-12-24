@@ -234,10 +234,7 @@
             </div>
             <!--/.bg-holder-->
 
-            <div class="col-md-8 col-lg-5 text-center">
-              <h5 class="text-danger">TESTIMONIAL</h5>
-              <h2>Our Awesome Clients</h2>
-            </div>
+           
           </div>
           <div class="carousel slide pt-6" id="carouselExampleDark" data-bs-ride="carousel">
             <div class="carousel-inner">

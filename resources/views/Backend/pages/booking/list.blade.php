@@ -1,6 +1,25 @@
 @extends('master')
 @section('contents')
-
+<div class="container">
+    <div class="container bg-danger">
+    @if ($message = Session::get('success'))
+        <div class="alert alert-success alert-block">
+            <button type="button" class="close" data-dismiss="alert">×</button>    
+            <strong>{{ $message }}</strong>
+        </div>
+    @endif
+    </div>
+</div>
+<div class="container">
+    <div class="container bg-danger">
+    @if ($message = Session::get('error'))
+        <div class="alert alert-danger alert-block">
+            <button type="button" class="close" data-dismiss="alert">×</button>    
+            <strong>{{ $message }}</strong>
+        </div>
+    @endif
+    </div>
+</div>
 <div class="container">
     <table class="table">
     <thead class="thead-dark">

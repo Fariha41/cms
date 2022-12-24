@@ -23,7 +23,7 @@
         </div>
        <div class="form-group">
             <label for="name">Vehicle Capacity</label>
-            <input required   name="vehicle_capacity" type="text" class="form-control" id="name" placeholder="vehicle capacity">
+            <input required   name="vehicle_capacity" type="number" class="form-control" id="name" placeholder="vehicle capacity">
 
             
         </div>

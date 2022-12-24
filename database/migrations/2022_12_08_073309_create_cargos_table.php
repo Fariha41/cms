@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('vehicle_number');
             $table->text('drivers_name');
             $table->text('drivers_license');
-            $table->string('vehicle_capacity');
+            $table->integer('vehicle_capacity')->nullable();
             $table->string('cargo_status');
             
 

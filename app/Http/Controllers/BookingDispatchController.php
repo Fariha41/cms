@@ -20,14 +20,26 @@ class BookingDispatchController extends Controller
         // $oneCargoCapacity = $cargo[0];
         // $bookingInThisCargo = Dispatch::where('cargo_id',$request->cargo)->with('booking','cargo')->get();
         // // dd($bookingInThisCargo);
-       
-        Dispatch::create ([
-            //database column name => input field name
-            'booking_id'=>$booking->id ,
-            'cargo_id'=>$request->cargo,
-            
-         ]);
-         return redirect()->route('admin.booking');
+        $checkIfItIsOncargoOrnot = Dispatch::where('booking_id',$booking->id)
+                                        ->first();
+        $checkIfTheCargoLimitisOkay = Dispatch::where('cargo_id',$request->cargo)->count();
+        
+        if($checkIfItIsOncargoOrnot == null && $checkIfTheCargoLimitisOkay < 5){
+            Dispatch::create ([
+                //database column name => input field name
+                'booking_id'=>$booking->id ,
+                'cargo_id'=>$request->cargo,
+                
+             ]);
+             $booking->update([
+                'status'=>'dispatched'
+             ]);
+             return redirect()->route('admin.booking')->with('success','booking dispatched successfully');
+        }else
+        {
+            return redirect()->route('admin.booking')->with('error','already dispatched or cargo is full');
+        }
+        
         }
 
         public function details(){
