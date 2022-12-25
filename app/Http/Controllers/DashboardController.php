@@ -9,6 +9,7 @@ class DashboardController extends Controller
 {
     public function Dashboard(){
          $totalBooking=Booking::all()->count();
-        return view('Backend.pages.dashboard', compact('totalBooking'));
+         $totalSuccessfullTransaction = Booking::where('payment_status','paid')->sum('enter_amount');
+        return view('Backend.pages.dashboard', compact('totalBooking','totalSuccessfullTransaction'));
     }
 }
