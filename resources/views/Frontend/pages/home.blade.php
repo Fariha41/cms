@@ -44,6 +44,8 @@
         <th> Percel Type</th>
         <th>Quantity</th>
         <th>Status</th>
+        <th>Transaction Id</th>
+        <th>Payment Status</th>
         
         </tr>
     </thead>
@@ -67,6 +69,8 @@
             <td>{{$data->quantity}}</td>
 
             <td>{{$data->status}}</td>
+            <td>{{$data->tran_id}}</td>
+            <td>{{$data->payment_status}}</td>
 
         </tr>
         @endforeach

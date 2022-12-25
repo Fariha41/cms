@@ -13,7 +13,7 @@ class BranchController extends Controller
         // $cats=Branch::all();//select * from categories;
 //        dd($cats);
 $cats=Branch::paginate(5);
-        return view('backend.pages.branch.index',compact('cats'));
+        return view('Backend.pages.branch.index',compact('cats'));
     }
 
     

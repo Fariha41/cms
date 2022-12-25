@@ -148,10 +148,10 @@ class SslCommerzPaymentController extends Controller
         $tran_id = $request->input('tran_id');
         $booking=Booking::where('tran_id',$tran_id)->first();
         $booking->update([
-                    'status'=>'paid',
-                    'payment_status'=>'paid'
+                    'status'=>'failed',
+                    'payment_status'=>'failed'
                 ]);
-        notify()->success('Transaction is not successfull');
+        notify()->success('Transaction is failed');
 
         return redirect()->route('webpage');
 
@@ -159,6 +159,12 @@ class SslCommerzPaymentController extends Controller
 
     public function cancel(Request $request)
     {
+        $tran_id = $request->input('tran_id');
+        $booking=Booking::where('tran_id',$tran_id)->first();
+        $booking->update([
+                    'status'=>'failed',
+                    'payment_status'=>'failed'
+                ]);
         
         notify()->success('Transaction is cancelled');
 

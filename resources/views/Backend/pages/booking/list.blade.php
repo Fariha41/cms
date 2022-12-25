@@ -33,6 +33,8 @@
             <th>Receiver phone number</th>
             <th>Receiver address</th>
             <th>Status</th>
+            <th>Transaction Id</th>
+            <th>Payment Status</th>
             <th>Action</th>
         </tr>
     </thead>
@@ -48,13 +50,19 @@
             <td>{{$data->receiver_mobile}}</td>
             <td>{{$data->receiver_address}}</td>           
             <td>{{$data->status}}</td>
+            <td>{{$data->tran_id}}</td>
+            <td>{{$data->payment_status}}</td>
             <td>
+                @if($data->status!='failed')
                 @if($data->status!='delivered')
                 <a href="{{route('booking.deliver',$data->id)}}" class="btn btn-sm btn-primary">Delivered</a>
                 @endif
                 <!-- <a href="{{route('admin.booking.delete',$data->id)}}" class="btn btn-sm btn-danger">Delete</a> -->
                 <a href="{{route('admin.booking.view',$data->id)}}" class="btn btn-sm btn-success">View</a>
                 <a href="{{route('booking.dispatch',$data->id)}}" class="btn btn-sm btn-success">Dispatch</a>
+                @else
+                <h5 class="text-danger"> Failed Payment</h5>
+                @endif
             </td>
 
         </tr>

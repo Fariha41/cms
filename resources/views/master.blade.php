@@ -13,10 +13,10 @@
     </head>
     <body class="sb-nav-fixed">
         <!-- Header -->
-        @include('backend.inc.header')
+        @include('Backend.inc.header')
 
         <!-- Sidebar -->
-        @include('backend.inc.sidebar')
+        @include('Backend.inc.sidebar')
 
         <!-- Main Content -->
         <main>
