@@ -33,7 +33,7 @@
             <td>{{$booking->sender_address}}</td>
             <td>{{$booking->sender_branch}}</td>
             <td>{{$booking->sender_city}}</td>
-            <td>{{$booking->enter_amount}}</td>
+            <td>{{$booking->enter_amount}} BDT.</td>
 
         </tr>
         

@@ -29,7 +29,7 @@ class WebController extends Controller
          $request->validate([
             'customer_name'=>'required',
            'customer_email'=>'required|unique:users,email',
-           'customer_phone'=>'required',
+           'customer_phone'=>'required|regex:/^\\+?[1-9][0-9]{7,14}$/',
            'password'=>'customer_password',
 
          ]);

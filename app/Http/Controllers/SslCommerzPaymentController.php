@@ -67,6 +67,21 @@ class SslCommerzPaymentController extends Controller
         
         $parcelprice = Parcel::where('id',$request->percel_type)->pluck('unit_price');
         // dd($parcelprice);
+        $request->validate([
+            'sender_name'=>'required',
+            'sender_email'=>'required|email',
+            'sender_mobile'=>'required|regex:/^\\+?[1-9][0-9]{7,14}$/',
+            'sender_branch'=>'required',
+            'sender_address'=>'required',
+            'sender_city'=>'required',
+            'quantity'=>'required|numeric|gt:1|lt:5',
+            'receiver_name'=>'required',
+            'receiver_email'=>'required',
+            'receiver_mobile'=>'required',
+            'receiver_branch'=>'required',
+            'receiver_address'=>'required',
+            'receiver_city'=>'required',
+        ]);
         booking::create([
             'user_id'=>auth()->user()->id,
             'sender_name'=>$request->sender_name,

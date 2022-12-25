@@ -22,7 +22,7 @@ class ParcelController extends Controller
     {
         $request->validate([
             'type'=>'required',
-            'unit_price'=>'required',
+            'unit_price'=>'required|numeric|gt:1',
 
         ]);  
           // dd($request->all());
@@ -55,9 +55,11 @@ class ParcelController extends Controller
     public function update(Request $request,$parcel_id){
         $parcel=Parcel::find($parcel_id);
 
-        // $parcel->parcel_type = $request->type;
-        // $parcel->unit_price = $request->unit_price;
-        // $parcel->save();
+        $request->validate([
+            'type'=>'required',
+            'unit_price'=>'required|numeric|gt:1',
+
+        ]); 
 
         $parcel->update ([
             //database column name => input field name

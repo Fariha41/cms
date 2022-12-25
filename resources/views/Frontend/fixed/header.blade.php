@@ -4,7 +4,6 @@
         <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto pt-2 pt-lg-0 font-base">
            
-            <li class="nav-item px-2"><a class="nav-link" href="#services">Our Services</a></li>
             <li class="nav-item px-2"><a class="nav-link" href="#findUs">Find Us</a></li>
             <!-- <li class="nav-item px-2"><a class="nav-link" >Payment</a></li> -->
             @auth

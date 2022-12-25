@@ -25,7 +25,7 @@
                 <tr>
                     <td scope="row">{{$data->id}}</td>
                     <td>{{$data->parcel_type}}</td>
-                    <td>{{$data->unit_price}}</td>
+                    <td>{{$data->unit_price}} BDT.</td>
                     <td>
                         <a href="{{route('parcel.edit',$data->id)}}" class="btn btn-primary">Update</a>
                         <!-- <a href="{{route('admin.parcel.delete',$data->id)}}" class="btn btn-danger">Delete</a>

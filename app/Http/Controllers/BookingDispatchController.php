@@ -43,7 +43,7 @@ class BookingDispatchController extends Controller
         }
 
         public function details(){
-            $dispatch = Dispatch::all();
+            $dispatch = Dispatch::with('booking','cargo')->get();
             return view('Backend.pages.dispatch.list',compact('dispatch'));
         }
 
