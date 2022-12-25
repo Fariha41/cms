@@ -98,7 +98,8 @@ class SslCommerzPaymentController extends Controller
             'receiver_address'=>$request->receiver_address,
             'receiver_city'=>$request->receiver_city,
             'percel_type'=>$request->percel_type,
-            'quantity'=>$request->quantity,       
+            'quantity'=>$request->quantity,
+            'tran_id'=>$post_data['tran_id'],      
         ]);
 
         $sslc = new SslCommerzNotification();
@@ -130,6 +131,12 @@ class SslCommerzPaymentController extends Controller
         // $sslc = new SslCommerzNotification();
         #Check order status in order tabel against the transaction id or order id.
         // dd($request->all());
+        $tran_id = $request->input('tran_id');
+        $booking=Booking::where('tran_id',$tran_id)->first();
+        $booking->update([
+                    'status'=>'paid',
+                    'payment_status'=>'paid'
+                ]);
         notify()->success('success','payment done successfully');
         return back();
             
@@ -138,6 +145,12 @@ class SslCommerzPaymentController extends Controller
 
     public function fail(Request $request)
     {
+        $tran_id = $request->input('tran_id');
+        $booking=Booking::where('tran_id',$tran_id)->first();
+        $booking->update([
+                    'status'=>'paid',
+                    'payment_status'=>'paid'
+                ]);
         notify()->success('Transaction is not successfull');
 
         return redirect()->route('webpage');

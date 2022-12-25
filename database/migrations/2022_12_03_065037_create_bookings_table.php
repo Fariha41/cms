@@ -31,7 +31,8 @@ return new class extends Migration
             $table->string('receiver_city');
             $table->string('percel_type');
             $table->double('quantity');
-
+            $table->string('tran_id')->nullable();
+            $table->string('payment_status')->default('pending');
             $table->string('status')->default('pending');
             $table->timestamps();
         });
