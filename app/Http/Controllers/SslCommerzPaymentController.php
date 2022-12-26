@@ -118,8 +118,8 @@ class SslCommerzPaymentController extends Controller
     public function success(Request $request)
     {   
         // dd(auth()->user());
-        // $user = User::find($request['value_a']);
-        // Auth::login($user, true);
+        $user = User::find($request['value_a']);
+        Auth::login($user, true);
         // notify()->success('Transaction is successfull');
 
         // return redirect()->route('webpage');

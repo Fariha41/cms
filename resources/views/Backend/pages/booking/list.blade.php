@@ -53,17 +53,17 @@
                 <td>{{$data->tran_id}}</td>
                 <td>{{$data->payment_status}}</td>
                 <td>
-                    @if($data->status!='failed')
-                        @if($data->status!='delivered')
-                            <a href="{{route('booking.deliver',$data->id)}}" class="btn btn-sm btn-primary">Delivered</a>
+                    @if($data->status != 'failed')
+                        @if($data->status != 'delivered')
+                            @if($data->status == 'dispatched')
+                                <a href="{{route('booking.deliver',$data->id)}}" class="btn btn-sm btn-primary">Deliver</a>
+                            @endif
+                            <!-- <a href="{{route('admin.booking.delete',$data->id)}}" class="btn btn-sm btn-danger">Delete</a> -->
+                            @if($data->status != 'dispatched')
+                                <a href="{{route('booking.dispatch',$data->id)}}" class="btn btn-sm btn-success">Dispatch</a>
+                            @endif 
                         @endif
-                        <!-- <a href="{{route('admin.booking.delete',$data->id)}}" class="btn btn-sm btn-danger">Delete</a> -->
-                        <a href="{{route('admin.booking.view',$data->id)}}" class="btn btn-sm btn-success">View</a>
-                        @if($data->status != 'dispatched')
-                            <a href="{{route('booking.dispatch',$data->id)}}" class="btn btn-sm btn-success">Dispatch</a>
-                        @else
-                            <button class="btn btn-sm btn-info">Dispatched</button>
-                        @endif  
+                        <a href="{{route('admin.booking.view',$data->id)}}" class="btn btn-sm btn-success">View</a> 
                     @else
                         <h5 class="text-danger"> Failed Payment</h5>
                     @endif
