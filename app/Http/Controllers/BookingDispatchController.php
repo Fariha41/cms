@@ -14,6 +14,7 @@ class BookingDispatchController extends Controller
         $booking = Booking::find($id);
         return view('Backend.pages.booking.bookingDispatch',compact('typ','booking'));
     }
+
     public function detailsdispatch(Request $request,$id){
         $booking = Booking::find($id);
         // $cargo = Cargo::where('id',$request->cargo)->pluck('vehicle_capacity');
@@ -24,7 +25,8 @@ class BookingDispatchController extends Controller
                                         ->first();
         $checkIfTheCargoLimitisOkay = Dispatch::where('cargo_id',$request->cargo)->count();
         
-        if($checkIfItIsOncargoOrnot == null && $checkIfTheCargoLimitisOkay < 5){
+        // if($checkIfItIsOncargoOrnot == null && $checkIfTheCargoLimitisOkay < 5){
+        if($checkIfTheCargoLimitisOkay < 5){
             Dispatch::create ([
                 //database column name => input field name
                 'booking_id'=>$booking->id ,
@@ -34,10 +36,11 @@ class BookingDispatchController extends Controller
              $booking->update([
                 'status'=>'dispatched'
              ]);
-             return redirect()->route('admin.booking')->with('success','booking dispatched successfully');
-        }else
+             return redirect()->route('admin.booking')->with('success','Booking dispatched successfully');
+        }
+        else
         {
-            return redirect()->route('admin.booking')->with('error','already dispatched or cargo is full');
+            return redirect()->route('admin.booking')->with('error','Cargo is full');
         }
         
         }

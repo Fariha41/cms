@@ -22,6 +22,7 @@ public function stores(Request $request){
 
 $request->validate([
     'vehicle_number'=>'required',
+    'branch_id'=>'required',
     'drivers_name'=>'required',
     'drivers_license'=>'required',
     'cargo_status'=>'required',
@@ -29,6 +30,7 @@ $request->validate([
 Cargo::create ([
     //database column name => input field name
         'vehicle_number'=>$request->vehicle_number ,
+        'branch_id'=>$request->branch_id,
         'drivers_name'=>$request->drivers_name,
         'drivers_license'=>$request->drivers_license,
         'cargo_status'=>$request->cargo_status,
@@ -56,6 +58,7 @@ public function edit($cargo_id)
 public function update(Request $request,$cargo_id){
     $request->validate([
         'vehicle_number'=>'required',
+        'branch_id'=>'required',
         'drivers_name'=>'required',
         'drivers_license'=>'required',
         'cargo_status'=>'required',
@@ -64,6 +67,7 @@ public function update(Request $request,$cargo_id){
     $cargo->update ([
         //database column name => input field name
         'vehicle_number'=>$request->vehicle_number ,
+        'branch_id'=>$request->branch_id,
         'drivers_name'=>$request->drivers_name,
         'drivers_license'=>$request->drivers_license,
         'cargo_status'=>$request->cargo_status,

@@ -10,6 +10,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class Dispatch extends Model
 {
     protected $guarded=[];
+    
     public function booking(){
         return $this->belongsTo(Booking::class,'booking_id','id');
     }
