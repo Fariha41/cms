@@ -11,18 +11,30 @@
           Booking
           </button>
             <a class="nav-item nav-link">
-            <a href="{{route('user.profile')}}" class="nav-item nav-link">
+            <li class="nav-item px-2"><a href="{{route('user.profile')}}" class="nav-item nav-link">  </li>
+          
             {{auth()->user()->name}}</a>
             <li class="nav-item px-2"><a href="{{route('user.logout')}}" class="nav-link" >Logout</a></li>
             @else
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#log">
-              Login
-            </button>
+            <div class="row">
+              <div class="col-md-4">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#log">
+                  Login
+                </button>
+
+              </div>
+             
+              
+              <div class="col-md-4">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#register">
+                Registration
+                </button>
+
+              </div>
+              <div class="col-md-3"></div>
+            </div>
 
 
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#register">
-            Registration
-          </button>
 
           
           @endauth

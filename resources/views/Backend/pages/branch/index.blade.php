@@ -18,7 +18,7 @@
                 <th scope="col">name</th>
                 <th scope="col">Phone</th>
                 <th scope="col">Address</th>
-                <th scope="col">Status</th>
+                <!-- <th scope="col">Status</th> -->
                 <th scope="col">Action</th>
                 </tr>
                 
@@ -30,7 +30,7 @@
                 <td>{{$data->Brance_name}}</td>
                 <td>{{$data->Branch_phone}}</td>
                 <td>{{$data->Branch_address}}</td>
-                <td>{{$data->Branch_status}}</td>
+                <!-- <td>{{$data->Branch_status}}</td> -->
                 <td>
                 <a href="{{route('branch.edit',$data->id)}}" class="btn btn-primary">edit</a>
                 <!-- <a href="{{route('admin.branch.delete',$data->id)}}" class="btn btn-danger">Delete</a> -->
