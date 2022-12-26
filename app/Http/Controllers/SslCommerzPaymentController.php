@@ -130,7 +130,7 @@ class SslCommerzPaymentController extends Controller
         // $currency = $request->input('currency');
         // $sslc = new SslCommerzNotification();
         #Check order status in order tabel against the transaction id or order id.
-        // dd($request->all());
+        dd($request->all());
         $tran_id = $request->input('tran_id');
         $booking=Booking::where('tran_id',$tran_id)->first();
         $booking->update([

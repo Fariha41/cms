@@ -14,7 +14,8 @@
         <input value="{{$parcel->unit_price}}" type="number" class="form-control" id="name" placeholder="type" name="unit_price">
     </div>
         
-
+    <div class="mt-2 mb-2">
     <button type="submit" class="btn btn-primary">Submit</button>
+</div>
 </form>
 @endsection

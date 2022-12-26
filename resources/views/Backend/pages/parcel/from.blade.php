@@ -13,8 +13,9 @@
  <input type="number" class="form-control" id="unit_price" placeholder="Unit Price" name="unit_price">
             
  </div>
-       
+ <div class="mt-2 mb-2">
         <button type="submit" class="btn btn-primary">Submit</button>
+</div>
 </from>
 @endsection
 

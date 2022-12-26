@@ -37,7 +37,9 @@
                 <option @if($cargo->Cargo_status=='inactive') selected @endif value="inactive">Inactive</option>
             </select>
         </div>
+        <div class="mt-2 mb-2">
         <button type="submit" class="btn btn-primary">Submit</button>
+</div>
 </form>
             
 @endsection

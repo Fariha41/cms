@@ -54,6 +54,12 @@ public function edit($cargo_id)
     return view('Backend.pages.cargo.edit',compact('cargo'));
 }
 public function update(Request $request,$cargo_id){
+    $request->validate([
+        'vehicle_number'=>'required',
+        'drivers_name'=>'required',
+        'drivers_license'=>'required',
+        'cargo_status'=>'required',
+    ]);
     $cargo=cargo::find($cargo_id);
     $cargo->update ([
         //database column name => input field name

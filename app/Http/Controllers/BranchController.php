@@ -59,6 +59,13 @@ $cats=Branch::paginate(5);
         return view('Backend.pages.branch.edit',compact('branch'));
     }
     public function update(Request $request,$branch_id){
+         
+        $request->validate([
+            'Brance_name'=>'required',
+            'Branch_phone'=>'required|regex:/^\\+?[1-9][0-9]{7,14}$/',
+            'Brance_address'=>'required',
+            'Branch_status'=>'required',
+    ]);
         $branch=branch::find($branch_id);
         $branch->update ([
             //database column name => input field name

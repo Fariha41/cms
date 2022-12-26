@@ -15,30 +15,13 @@
 
                             <a class="nav-link" href="{{route('branch.index') }}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                brance
+                                Branch
                             </a>
                             
-                           
-
-                            
-<!--                             
-                            <a class="nav-link" href="{{('location')}}">
-                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
-                                location
-                            </a> -->
-
                             <a class="nav-link" href="{{route('parcel.type')}}" >
                                 <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
-                                parcel type
+                                Parcel type
                             </a>
-
-
-                            <!-- <a class="nav-link" href="{{('price set up')}}" >
-                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
-                                price set up
-                            </a>
-
-                             -->
 
                             <a class="nav-link" href="{{route('admin.booking')}}" >
                                 <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
@@ -46,7 +29,7 @@
                             </a>
                             <a class="nav-link" href="{{route('cargo.type')}}" >
                                 <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
-                                cargo
+                                Cargo
                             </a>
                               
                             <a class="nav-link" href="{{route('admin.dispatch')}}" >
@@ -62,7 +45,7 @@
 
                             <a class="nav-link" href="{{route('booking.report')}}" >
                                 <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
-                                report
+                                Report
                             </a>
                         </div>
                     </div>
