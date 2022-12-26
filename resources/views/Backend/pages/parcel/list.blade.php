@@ -13,7 +13,7 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th scope="col">ID</th>
+                    <th scope="col">Serial Number</th>
                     <th scope="col">type </th>
                     <th scope="col">unit_price</th>
                     <th scope="col">Action</th>

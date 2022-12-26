@@ -75,6 +75,11 @@ class WebController extends Controller
     public function updateProfile(Request $request){
             // dd($request->all());
        //validation
+       $request->validate([
+           'name'=>'required',
+           'email'=>'required',
+           'mobile'=>'required|regex:/^\\+?[1-9][0-9]{7,14}$/',
+    ]);
 
         $user=User::find(auth()->user()->id);
         $user->update([

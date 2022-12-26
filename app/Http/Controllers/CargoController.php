@@ -17,7 +17,15 @@ public function from (){
 }
 public function stores(Request $request){
 
+
 // dd($request->all());
+
+$request->validate([
+    'vehicle_number'=>'required',
+    'drivers_name'=>'required',
+    'drivers_license'=>'required',
+    'cargo_status'=>'required',
+]);
 Cargo::create ([
     //database column name => input field name
         'vehicle_number'=>$request->vehicle_number ,

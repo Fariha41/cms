@@ -14,7 +14,7 @@
         <table class="table">
             <thead>
                 <tr>
-                <th scope="col">ID</th>
+                <th scope="col">Serial Number</th>
                 <th scope="col">name</th>
                 <th scope="col">Phone</th>
                 <th scope="col">Address</th>

@@ -6,7 +6,7 @@
     <table class="table">
     <thead class="thead-dark">
         <tr>
-        <th scope="row">1</th>
+        <th scope="row">Serial Number</th>
         <th>Name</th>    
         <th>Email</th>
         <th>Message</th>

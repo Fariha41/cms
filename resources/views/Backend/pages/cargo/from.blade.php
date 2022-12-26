@@ -20,13 +20,7 @@
             <input required  name="drivers_license" type="text" class="form-control" id="name" placeholder="drivers license">
 
             
-        </div>
-       <div class="form-group">
-            <label for="name">Vehicle Capacity</label>
-            <input required   name="vehicle_capacity" type="number" class="form-control" id="name" placeholder="vehicle capacity">
-
-            
-        </div>
+       
 
         <div class="form-group">
             <label for="">Select Status</label>

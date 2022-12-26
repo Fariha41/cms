@@ -24,7 +24,7 @@
     <table class="table">
     <thead class="thead-dark">
         <tr>
-            <th scope="row">#</th>
+            <th scope="row">Serial Number</th>
             <th>sender name</th>
             <th>sender phone number</th>
             <th>sender address</th>

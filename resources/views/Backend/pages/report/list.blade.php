@@ -31,7 +31,7 @@
     <table class="table">
     <thead class="thead-dark">
         <tr>
-            <th scope="row">1</th>
+            <th scope="row">Serial Number</th>
             <th>sender name</th>
             <th>sender phone number</th>
             <th>sender address</th>
@@ -57,13 +57,7 @@
             <td>{{$data->receiver_mobile}}</td>
             <td>{{$data->receiver_address}}</td>           
             <td>{{$data->status}}</td>
-            <td>
-                @if($data->status!='delivered')
-                <a href="{{route('booking.deliver',$data->id)}}" class="btn btn-sm btn-primary">Delivered</a>
-                @endif
-                
-            </td>
-
+            
         </tr>
         @endforeach
         @endif

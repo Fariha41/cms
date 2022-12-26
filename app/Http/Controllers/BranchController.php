@@ -27,6 +27,13 @@ $cats=Branch::paginate(5);
     public function store(Request $request)
     {
          //        dd($request->all());
+
+         $request->validate([
+                'Brance_name'=>'required',
+                'Branch_phone'=>'required|regex:/^\\+?[1-9][0-9]{7,14}$/',
+                'Brance_address'=>'required',
+                'Branch_status'=>'required',
+        ]);
          Branch::create ([
             //database column name => input field name
                 'Brance_name'=>$request->Brance_name ,

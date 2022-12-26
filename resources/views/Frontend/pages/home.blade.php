@@ -28,7 +28,7 @@
                 <table class="table">
     <thead class="thead-dark">
         <tr>
-        <th scope="row">1</th>
+        <th scope="row">Serial Number</th>
         <th>sender name</th>
         
         <th>sender phone number</th>

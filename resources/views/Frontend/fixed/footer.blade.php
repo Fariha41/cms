@@ -44,11 +44,11 @@
               <div class="card card-span rounded-2 mb-3">
                 <div class="row">
                  
-                  <div class="col-md-6 col-lg-5 d-flex flex-center">
+                  <div class="col-md-5 col-lg-4 d-flex flex-center">
                     <div class="card-body">
-                      <h2>Contact with us</h2>
+                      <h1>Contact with us</h1>
                       <h5>Our Main Branch</h5>
-                      <p class="text-700 my-4"> <i class="fas fa-map-marker-alt text-warning me-3"></i><span>House:1,Road:2,Uttara Sector:9,Dhaka,Bangladesh</span></p>
+                      <p class="text-700 my-4"> <i class="fas fa-map-marker-alt text-warning me-3"></i><span>House:1,Road:2,Uttara Sector:9,Dhaka,Bangladesh</span><br>Contact Number:01936-003154</p>
                       <p><i class="fas fa-phone-alt text-warning me-3"></i><span class="text-700">Saturday-Friday: 9am - 7pm</span></p>
                      
                       <ul class="list-unstyled list-inline mt-5">
